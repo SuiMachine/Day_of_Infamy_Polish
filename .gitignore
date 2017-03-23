@@ -52,3 +52,7 @@ Temporary Items
 #SuisVPKIgnores
 SuisVPK/obj/*
 SuisVPK/bin/*
+
+#VPKHelperIgnores
+VPKHelper/*.pdb
+VPKHelper/*.config
