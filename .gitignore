@@ -45,3 +45,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Other
+*.suo
+
+#SuisVPKIgnores
+SuisVPK/obj/*
+SuisVPK/bin/*
