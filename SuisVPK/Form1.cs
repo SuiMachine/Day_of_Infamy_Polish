@@ -128,7 +128,7 @@ namespace SuisVPK
             string to = Path.Combine(Directory.GetParent(vpk_location).FullName, "doi", "custom", fileName);
             if (File.Exists(to))
                 File.Delete(to);
-            File.Move(from, to);
+            File.Copy(from, to);
         }
 
         private bool filesAreDifferent()
