@@ -113,6 +113,8 @@ namespace SuisVPK
                 string fileName = d.Name + ".vpk";
                 string from = Path.Combine(Directory.GetParent(workDirectory).FullName, Path.Combine(Directory.GetParent(workDirectory).FullName, fileName));
                 string to = Path.Combine(Directory.GetParent(vpk_location).FullName, "doi", "custom", fileName);
+                if(File.Exists(to))
+                    File.Delete(to);
                 File.Move(from, to);
 
             }
