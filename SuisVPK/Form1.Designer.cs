@@ -38,6 +38,11 @@
             this.B_SetWorkFolder = new System.Windows.Forms.Button();
             this.TB_WorkFolder = new System.Windows.Forms.TextBox();
             this.minizedIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolbarContexMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.updateFilelistAndVPKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolbarContexMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // TB_DevToolsPath
@@ -104,10 +109,40 @@
             // 
             // minizedIcon
             // 
+            this.minizedIcon.ContextMenuStrip = this.toolbarContexMenu;
             this.minizedIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("minizedIcon.Icon")));
             this.minizedIcon.Text = "SuicideMachine\'s VPK Helper";
             this.minizedIcon.Visible = true;
             this.minizedIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.minizedIcon_MouseDoubleClick);
+            // 
+            // toolbarContexMenu
+            // 
+            this.toolbarContexMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateFilelistAndVPKToolStripMenuItem,
+            this.cancelToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.toolbarContexMenu.Name = "toolbarContexMenu";
+            this.toolbarContexMenu.Size = new System.Drawing.Size(194, 92);
+            // 
+            // updateFilelistAndVPKToolStripMenuItem
+            // 
+            this.updateFilelistAndVPKToolStripMenuItem.Name = "updateFilelistAndVPKToolStripMenuItem";
+            this.updateFilelistAndVPKToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.updateFilelistAndVPKToolStripMenuItem.Text = "Update filelist and VPK";
+            this.updateFilelistAndVPKToolStripMenuItem.Click += new System.EventHandler(this.updateFilelistAndVPKToolStripMenuItem_Click);
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.cancelToolStripMenuItem.Text = "Cancel";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -127,6 +162,7 @@
             this.Name = "Form1";
             this.Text = "SuicideMachine\'s VPK Helper";
             this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.toolbarContexMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,6 +178,10 @@
         private System.Windows.Forms.Button B_SetWorkFolder;
         private System.Windows.Forms.TextBox TB_WorkFolder;
         private System.Windows.Forms.NotifyIcon minizedIcon;
+        private System.Windows.Forms.ContextMenuStrip toolbarContexMenu;
+        private System.Windows.Forms.ToolStripMenuItem updateFilelistAndVPKToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

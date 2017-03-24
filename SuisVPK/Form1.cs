@@ -16,6 +16,7 @@ namespace SuisVPK
     {
         Timer timerCheck = new Timer();
         Dictionary<string, DateTime> fileDictionary = new Dictionary<string, DateTime>();
+        ContextMenu contexTooltipMenu = new ContextMenu();
 
         const string settingsFile = "confg.cfg";
 
@@ -30,6 +31,10 @@ namespace SuisVPK
             InitializeComponent();
             if (File.Exists(settingsFile))
                 loadSettings();
+
+            contexTooltipMenu.MenuItems.Add("Update file list and VPK");
+            contexTooltipMenu.MenuItems.Add("Cancel");
+            contexTooltipMenu.MenuItems.Add("Exit");
         }
 
         #region ButtonEvents
@@ -53,8 +58,10 @@ namespace SuisVPK
 
         private void B_Watch_Click(object sender, EventArgs e)
         {
+
             if(vpk_location!= "" && Directory.Exists(vpk_location) && workDirectory != "" && Directory.Exists(workDirectory))
             {
+                fileDictionary.Clear();
                 createList();
                 this.WindowState = FormWindowState.Minimized;
 
@@ -98,26 +105,30 @@ namespace SuisVPK
             //Debug.WriteLine("Timer check tick");
             if(filesAreDifferent())
             {
-                //Debug.WriteLine("Files are different. Reubilding...");
-                Process proc = new Process();
-                proc.StartInfo.WorkingDirectory = vpk_location;
-                proc.StartInfo.FileName = vpk_exe;
-                proc.StartInfo.Arguments = String.Format("{0} {1}", vpk_args, workDirectory);
-                proc.Start();
-                proc.WaitForExit();
-                //Debug.WriteLine("Done.");
-
-                DirectoryInfo d = new DirectoryInfo(workDirectory);
-
-
-                string fileName = d.Name + ".vpk";
-                string from = Path.Combine(Directory.GetParent(workDirectory).FullName, Path.Combine(Directory.GetParent(workDirectory).FullName, fileName));
-                string to = Path.Combine(Directory.GetParent(vpk_location).FullName, "doi", "custom", fileName);
-                if(File.Exists(to))
-                    File.Delete(to);
-                File.Move(from, to);
-
+                rebuildVPK();
             }
+        }
+
+        private void rebuildVPK()
+        {
+            //Debug.WriteLine("Files are different. Reubilding...");
+            Process proc = new Process();
+            proc.StartInfo.WorkingDirectory = vpk_location;
+            proc.StartInfo.FileName = vpk_exe;
+            proc.StartInfo.Arguments = String.Format("{0} {1}", vpk_args, workDirectory);
+            proc.Start();
+            proc.WaitForExit();
+            //Debug.WriteLine("Done.");
+
+            DirectoryInfo d = new DirectoryInfo(workDirectory);
+
+
+            string fileName = d.Name + ".vpk";
+            string from = Path.Combine(Directory.GetParent(workDirectory).FullName, Path.Combine(Directory.GetParent(workDirectory).FullName, fileName));
+            string to = Path.Combine(Directory.GetParent(vpk_location).FullName, "doi", "custom", fileName);
+            if (File.Exists(to))
+                File.Delete(to);
+            File.Move(from, to);
         }
 
         private bool filesAreDifferent()
@@ -187,6 +198,18 @@ namespace SuisVPK
         {
             this.Show();
             this.WindowState = FormWindowState.Normal;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void updateFilelistAndVPKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fileDictionary.Clear();
+            createList();
+            rebuildVPK();
         }
     }
 }
