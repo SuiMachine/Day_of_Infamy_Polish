@@ -500,7 +500,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"12"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF"
+				"range"		"0x0000 0x017F"
 				"yres"	"480 599"
 			}
 			"2"
@@ -508,7 +508,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"13"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF"
+				"range"		"0x0000 0x017F"
 				"yres"	"600 767"
 			}
 			"3"
@@ -516,7 +516,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"14"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF"
+				"range"		"0x0000 0x017F"
 				"yres"	"768 1023"
 				"antialias"	"1"
 			}
@@ -525,7 +525,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"20"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF"
+				"range"		"0x0000 0x017F"
 				"yres"	"1024 1199"
 				"antialias"	"1"
 			}
@@ -534,7 +534,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"24"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF"
+				"range"		"0x0000 0x017F"
 				"yres"	"1200 6000"
 				"antialias"	"1"
 			}
@@ -542,7 +542,7 @@ Scheme
 			{
 				"name"		"Arial"
 				"tall"		"12"
-				"range" 		"0x0000 0x01FF"
+				"range" 		"0x0000 0xFFFF"
 				"weight"		"0"
 			}
 		}
@@ -554,7 +554,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"12"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"480 599"
 			}
 			"2"
@@ -562,7 +562,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"13"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"600 767"
 			}
 			"3"
@@ -570,7 +570,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"14"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"768 1023"
 				"antialias"	"1"
 			}
@@ -579,7 +579,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"20"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1024 1199"
 				"antialias"	"1"
 			}
@@ -588,7 +588,7 @@ Scheme
 				"name"		"Verdana"
 				"tall"		"24"
 				"weight"	"0"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"yres"	"1200 6000"
 				"antialias"	"1"
 			}
@@ -596,14 +596,14 @@ Scheme
 			{
 				"name"		"Verdana"
 				"tall"		"12"
-				"range" 		"0x0000 0x01FF"
+				"range" 		"0x0000 0x017F"
 				"weight"		"0"
 			}
 			"7"
 			{
 				"name"		"Arial"
 				"tall"		"11"
-				"range" 		"0x0000 0x01FF"
+				"range" 		"0x0000 0xFFFF"
 				"weight"		"0"
 			}
 		}
@@ -638,7 +638,7 @@ Scheme
 				"name"		"Trebuchet MS"
 				"tall"		"24"
 				"weight"	"900"
-				"range"		"0x0000 0x01FF"	//	Rozszerzona Łacina, bo jednak wspiera
+				"range"		"0x0000 0x017F"	//	Basic Latin
 				"antialias" "1"
 				"additive"	"1"
 			}
@@ -1507,7 +1507,7 @@ Scheme
 				"name"		"UniversLTStd-BoldCn"
 				"tall"		"20"
 				"weight"	"400"
-				"range"		"0x0000 0x01FF" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 				"antialias"	"1"
 			}
 		}
@@ -1855,30 +1855,35 @@ Scheme
 		{
 			"font"	"resource/cmuntb.vfont"
 			"name"	"TypewriterTextBold"
+			"range"	"0x0000 0xFFFF"
 		}
 		
 		"10"
 		{
 			"font"	"resource/Doif.otf"
 			"name"	"Doif"
+			"range"	"0x0000 0xFFFF"
 		}
 
 		"11"
 		{
 			"font"	"resource/html/uiresource/fonts/cmunvt.ttf"
 			"name"	"TypewriterTextNormal"
+			"range"	"0x0000 0xFFFF"
 		}
 
 		"12"
 		{
 			"font"	"resource/Doifura.otf"
 			"name"	"Doifura"
+			"range"	"0x0000 0xFFFF"
 		}
 		
 		"13"
 		{
 			"font"	"resource/cmunvt.ttf"
 			"name"	"TypewriterTextVarible"
+			"range"	"0x0000 0xFFFF"
 		}
 		
 	}

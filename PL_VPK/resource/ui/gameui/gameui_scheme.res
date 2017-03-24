@@ -637,7 +637,6 @@ Scheme
 				"tall"		"14"
 				"weight"	"300"
 				"antialias"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}	
 
@@ -650,7 +649,6 @@ Scheme
 				"tall"		"24"
 				"weight"	"400"
 				"antialias"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -665,7 +663,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"3"
 				"additive"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -680,7 +677,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"0"
 				"additive"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}		
 		}
 		
@@ -695,7 +691,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"0"
 				"additive"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}		
 		}
 		
@@ -710,7 +705,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"0"
 				"additive"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}		
 		}
 
@@ -725,7 +719,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"0"
 				"additive"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}		
 		}
 		
@@ -739,7 +732,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 			
@@ -753,7 +745,6 @@ Scheme
 				"weight"	"100"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -768,7 +759,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"3"
 				"additive"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -781,7 +771,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -794,7 +783,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -808,7 +796,6 @@ Scheme
 				"weight"		"500"
 				"antialias"		"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -822,7 +809,6 @@ Scheme
 				"weight"		"400"
 				"antialias"		"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -837,7 +823,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"3"
 				"additive"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -851,7 +836,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -863,7 +847,7 @@ Scheme
 				"tall"			"12"
 				"weight"		"100"
 				"antialias" 	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"			"0x0000 0xFFFF"
 			}		
 		}
 			
@@ -878,7 +862,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"3"
 				"additive"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}	
 		
@@ -892,7 +875,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -906,7 +888,6 @@ Scheme
 				"weight"	"100"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -929,7 +910,6 @@ Scheme
 				"tall"		"11"
 				"weight"	"0"
 				"symbol"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -942,7 +922,7 @@ Scheme
 				"tall"		"16"
 				"weight"	"0"
 				"symbol"	"1"
-				"range"		"0x0000 0x01FF"	//	Basic Latin
+				"range"		"0x0000 0x007F"	//	Basic Latin
 				"antialias"	"1"
 			}
 		}	
@@ -958,7 +938,6 @@ Scheme
 				"antialias"	"1"
 				"blur"		"0"
 				"additive"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}		
 		}
 		
@@ -970,7 +949,6 @@ Scheme
 				"tall"		"9"
 				"weight"		"300"
 				"antialias"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -984,7 +962,6 @@ Scheme
 				"weight"			"500"
 				"antialias"		"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -997,7 +974,6 @@ Scheme
 				"tall"		"11"
 				"weight"		"300"
 				"antialias"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1011,7 +987,6 @@ Scheme
 				"weight"			"500"
 				"antialias"		"1"
 				"dropshadow"		"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1025,7 +1000,6 @@ Scheme
 				"weight"			"500"
 				"antialias"		"1"
 				"dropshadow"		"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1037,7 +1011,6 @@ Scheme
 				"tall"		"24"
 				"weight"		"300"
 				"antialias"	"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1048,7 +1021,6 @@ Scheme
 				"name"			"TypewriterTextBold"
 				"tall"			"17"
 				"antialias"		"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1060,7 +1032,6 @@ Scheme
 				"name"			"TypewriterTextBold"
 				"tall"			"14"
 				"antialias"		"1"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1074,7 +1045,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1088,7 +1058,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1102,7 +1071,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1116,7 +1084,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1130,7 +1097,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1144,7 +1110,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1158,7 +1123,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1172,7 +1136,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1186,7 +1149,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1200,7 +1162,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1214,7 +1175,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1228,7 +1188,6 @@ Scheme
 				"weight"	"400"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1242,7 +1201,7 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0xFFFF"
 			}
 		}
 
@@ -1256,7 +1215,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1270,7 +1228,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1284,7 +1241,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1298,7 +1254,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1312,7 +1267,7 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
+				"range"		"0x0000 0xFFFF"
 			}
 		}
 
@@ -1326,7 +1281,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1340,7 +1294,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1354,7 +1307,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		
@@ -1368,7 +1320,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1382,7 +1333,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 
@@ -1396,7 +1346,6 @@ Scheme
 				"weight"	"800"
 				"antialias"	"1"
 				"dropshadow"	"0"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 	}
@@ -2097,24 +2046,28 @@ Scheme
 		{
 			"font"	"resource/cmuntb.vfont"
 			"name"	"TypewriterTextBold"
+			"range"	"0x0000 0xFFFF"
 		}
 		
 		"13"
 		{
 			"font"	"resource/Doif.otf"
 			"name"	"Doif"
+			"range"	"0x0000 0xFFFF"
 		}
 
 		"14"
 		{
 			"font"	"resource/html/uiresource/fonts/cmunvt.ttf"
 			"name"	"TypewriterTextNormal"
+			"range"	"0x0000 0xFFFF"
 		}
 
 		"15"
 		{
 			"font"	"resource/cmunvt.ttf"
 			"name"	"TypewriterTextVarible"
+			"range"	"0x0000 0xFFFF"
 		}
     }
 }
