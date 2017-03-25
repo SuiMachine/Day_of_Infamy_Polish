@@ -2046,28 +2046,28 @@ Scheme
 		{
 			"font"	"resource/cmuntb.vfont"
 			"name"	"TypewriterTextBold"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 		
 		"13"
 		{
 			"font"	"resource/Doif.otf"
 			"name"	"Doif"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 
 		"14"
 		{
 			"font"	"resource/html/uiresource/fonts/cmunvt.ttf"
 			"name"	"TypewriterTextNormal"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 
 		"15"
 		{
 			"font"	"resource/cmunvt.ttf"
 			"name"	"TypewriterTextVarible"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
     }
 }

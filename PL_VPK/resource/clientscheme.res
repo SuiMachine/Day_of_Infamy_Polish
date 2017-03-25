@@ -542,7 +542,7 @@ Scheme
 			{
 				"name"		"Arial"
 				"tall"		"12"
-				"range" 		"0x0000 0xFFFF"
+				"range" 		"0x0000 0x017F"
 				"weight"		"0"
 			}
 		}
@@ -603,7 +603,7 @@ Scheme
 			{
 				"name"		"Arial"
 				"tall"		"11"
-				"range" 		"0x0000 0xFFFF"
+				"range" 		"0x0000 0x017F"
 				"weight"		"0"
 			}
 		}
@@ -1855,35 +1855,35 @@ Scheme
 		{
 			"font"	"resource/cmuntb.vfont"
 			"name"	"TypewriterTextBold"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 		
 		"10"
 		{
 			"font"	"resource/Doif.otf"
 			"name"	"Doif"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 
 		"11"
 		{
 			"font"	"resource/html/uiresource/fonts/cmunvt.ttf"
 			"name"	"TypewriterTextNormal"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 
 		"12"
 		{
 			"font"	"resource/Doifura.otf"
 			"name"	"Doifura"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 		
 		"13"
 		{
 			"font"	"resource/cmunvt.ttf"
 			"name"	"TypewriterTextVarible"
-			"range"	"0x0000 0xFFFF"
+			"range"	"0x0000 0x017F"
 		}
 		
 	}
