@@ -17,20 +17,16 @@ namespace SuisVPK
         Timer timerCheck = new Timer();
         Dictionary<string, DateTime> fileDictionary = new Dictionary<string, DateTime>();
         ContextMenu contexTooltipMenu = new ContextMenu();
+        public ConfigFile configFileRef = new ConfigFile();
 
-        const string settingsFile = "confg.cfg";
-
-        string workDirectory = "";
-
-        string vpk_location = "";
         const string vpk_exe = "vpk.exe";
         const string vpk_args = "";
 
         public Form1()
         {
             InitializeComponent();
-            if (File.Exists(settingsFile))
-                loadSettings();
+            configFileRef = new ConfigFile();
+            updateConfigInformation();
 
             contexTooltipMenu.MenuItems.Add("Update file list and VPK");
             contexTooltipMenu.MenuItems.Add("Cancel");
@@ -40,40 +36,42 @@ namespace SuisVPK
         #region ButtonEvents
         private void b_devpath_set_Click(object sender, EventArgs e)
         {
-            if(Directory.Exists(TB_DevToolsPath.Text) && File.Exists(Path.Combine(TB_DevToolsPath.Text, vpk_exe)))
+            if (Directory.Exists(TB_DevToolsPath.Text) && File.Exists(Path.Combine(TB_DevToolsPath.Text, vpk_exe)))
             {
-                vpk_location = TB_DevToolsPath.Text;
+                configFileRef.vpk_location = TB_DevToolsPath.Text;
+                configFileRef.saveSettings();
             }
-            saveSettings();
+            else
+                MessageBox.Show("Selected folder doesn't seem to have vpk.exe in it. Please, choose the correct folder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void B_SetWorkFolder_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(TB_WorkFolder.Text))
             {
-                workDirectory = TB_WorkFolder.Text;
+                configFileRef.workDirectory = TB_WorkFolder.Text;
             }
-            saveSettings();
+            configFileRef.saveSettings();
         }
 
         private void B_Watch_Click(object sender, EventArgs e)
         {
 
-            if(vpk_location!= "" && Directory.Exists(vpk_location) && workDirectory != "" && Directory.Exists(workDirectory))
+            if(configFileRef .vpk_location!= "" && Directory.Exists(configFileRef.vpk_location) && configFileRef.workDirectory != "" && Directory.Exists(configFileRef.workDirectory))
             {
                 fileDictionary.Clear();
                 createList();
                 this.WindowState = FormWindowState.Minimized;
 
                 timerCheck.Tick += TimerCheck_Tick;
-                timerCheck.Interval = 5000;
+                timerCheck.Interval = 3000;
                 timerCheck.Start();
             }
         }
 
         private void createList()
         {
-            string[] Directories = Directory.GetDirectories(workDirectory, "*", SearchOption.AllDirectories);
+            string[] Directories = Directory.GetDirectories(configFileRef.workDirectory, "*", SearchOption.AllDirectories);
             List<string> files = new List<string>();
 
             foreach (string directory in Directories)
@@ -84,7 +82,7 @@ namespace SuisVPK
                     files.Add(file);
                 }
             }
-            string[] final_files = Directory.GetFiles(workDirectory);
+            string[] final_files = Directory.GetFiles(configFileRef.workDirectory);
             foreach (string file in final_files)
             {
                 files.Add(file);
@@ -113,19 +111,19 @@ namespace SuisVPK
         {
             //Debug.WriteLine("Files are different. Reubilding...");
             Process proc = new Process();
-            proc.StartInfo.WorkingDirectory = vpk_location;
+            proc.StartInfo.WorkingDirectory = configFileRef.vpk_location;
             proc.StartInfo.FileName = vpk_exe;
-            proc.StartInfo.Arguments = String.Format("{0} {1}", vpk_args, workDirectory);
+            proc.StartInfo.Arguments = String.Format("{0} {1}", vpk_args, configFileRef.workDirectory);
             proc.Start();
             proc.WaitForExit();
             //Debug.WriteLine("Done.");
 
-            DirectoryInfo d = new DirectoryInfo(workDirectory);
+            DirectoryInfo d = new DirectoryInfo(configFileRef.workDirectory);
 
 
             string fileName = d.Name + ".vpk";
-            string from = Path.Combine(Directory.GetParent(workDirectory).FullName, Path.Combine(Directory.GetParent(workDirectory).FullName, fileName));
-            string to = Path.Combine(Directory.GetParent(vpk_location).FullName, "doi", "custom", fileName);
+            string from = Path.Combine(Directory.GetParent(configFileRef.workDirectory).FullName, Path.Combine(Directory.GetParent(configFileRef.workDirectory).FullName, fileName));
+            string to = Path.Combine(Directory.GetParent(configFileRef.vpk_location).FullName, configFileRef.modDir, "custom", fileName);
             if (File.Exists(to))
                 File.Delete(to);
             File.Copy(from, to);
@@ -149,36 +147,6 @@ namespace SuisVPK
             }
             return false;
         }
-
-        #region SaveLoad
-        private void loadSettings()
-        {
-            StreamReader SR = new StreamReader(settingsFile);
-            string line = "";
-            while ((line = SR.ReadLine()) != null)
-            {
-                if (line.StartsWith("WorkDir:"))
-                {
-                    line = line.Split(new char[] { ':' }, 2)[1];
-                    workDirectory = line;
-                }
-                else if (line.StartsWith("VPKDir:"))
-                {
-                    line = line.Split(new char[] { ':' }, 2)[1];
-                    vpk_location = line;
-                }
-            }
-            TB_DevToolsPath.Text = vpk_location;
-            TB_WorkFolder.Text = workDirectory;
-            SR.Close();
-            SR.Dispose();
-        }
-
-        private void saveSettings()
-        {
-            File.WriteAllText(settingsFile, "WorkDir:" + workDirectory + "\nVPKDir:" + vpk_location);
-        }
-        #endregion
 
         private void Form1_Resize(object sender, EventArgs e)
         {
@@ -210,6 +178,39 @@ namespace SuisVPK
             fileDictionary.Clear();
             createList();
             rebuildVPK();
+        }
+
+        private void TB_SetModDir_Click(object sender, EventArgs e)
+        {
+            if(TB_ModDir.Text != "")
+            {
+                configFileRef.modDir = TB_ModDir.Text;
+                configFileRef.saveSettings();
+            }
+        }
+
+        private void B_OpenChecker_Click(object sender, EventArgs e)
+        {
+            FileLineCheck flc = new FileLineCheck(configFileRef);
+            flc.ShowDialog();
+            updateConfigInformation();
+            flc.Dispose();
+        }
+
+        private void updateConfigInformation()
+        {
+            TB_DevToolsPath.Text = configFileRef.vpk_location;
+            TB_WorkFolder.Text = configFileRef.workDirectory;
+            TB_ModDir.Text = configFileRef.modDir;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (minizedIcon.Visible)
+            {
+                minizedIcon.Visible = false;
+                minizedIcon.Dispose();
+            }
         }
     }
 }

@@ -42,6 +42,10 @@
             this.updateFilelistAndVPKToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TB_SetModDir = new System.Windows.Forms.Button();
+            this.TB_ModDir = new System.Windows.Forms.TextBox();
+            this.B_OpenChecker = new System.Windows.Forms.Button();
             this.toolbarContexMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,11 +77,11 @@
             // 
             // B_Watch
             // 
-            this.B_Watch.Location = new System.Drawing.Point(184, 64);
+            this.B_Watch.Location = new System.Drawing.Point(144, 90);
             this.B_Watch.Name = "B_Watch";
-            this.B_Watch.Size = new System.Drawing.Size(75, 23);
+            this.B_Watch.Size = new System.Drawing.Size(111, 23);
             this.B_Watch.TabIndex = 6;
-            this.B_Watch.Text = "Watch";
+            this.B_Watch.Text = "Watch for changes";
             this.B_Watch.UseVisualStyleBackColor = true;
             this.B_Watch.Click += new System.EventHandler(this.B_Watch_Click);
             // 
@@ -122,7 +126,7 @@
             this.cancelToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolbarContexMenu.Name = "toolbarContexMenu";
-            this.toolbarContexMenu.Size = new System.Drawing.Size(194, 92);
+            this.toolbarContexMenu.Size = new System.Drawing.Size(194, 70);
             // 
             // updateFilelistAndVPKToolStripMenuItem
             // 
@@ -144,11 +148,51 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Mod dir:";
+            // 
+            // TB_SetModDir
+            // 
+            this.TB_SetModDir.Location = new System.Drawing.Point(375, 62);
+            this.TB_SetModDir.Name = "TB_SetModDir";
+            this.TB_SetModDir.Size = new System.Drawing.Size(75, 23);
+            this.TB_SetModDir.TabIndex = 11;
+            this.TB_SetModDir.Text = "Set";
+            this.TB_SetModDir.UseVisualStyleBackColor = true;
+            this.TB_SetModDir.Click += new System.EventHandler(this.TB_SetModDir_Click);
+            // 
+            // TB_ModDir
+            // 
+            this.TB_ModDir.Location = new System.Drawing.Point(97, 64);
+            this.TB_ModDir.Name = "TB_ModDir";
+            this.TB_ModDir.Size = new System.Drawing.Size(272, 20);
+            this.TB_ModDir.TabIndex = 10;
+            // 
+            // B_OpenChecker
+            // 
+            this.B_OpenChecker.Location = new System.Drawing.Point(10, 90);
+            this.B_OpenChecker.Name = "B_OpenChecker";
+            this.B_OpenChecker.Size = new System.Drawing.Size(128, 23);
+            this.B_OpenChecker.TabIndex = 13;
+            this.B_OpenChecker.Text = "Missing lines checking";
+            this.B_OpenChecker.UseVisualStyleBackColor = true;
+            this.B_OpenChecker.Click += new System.EventHandler(this.B_OpenChecker_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 95);
+            this.ClientSize = new System.Drawing.Size(460, 120);
+            this.Controls.Add(this.B_OpenChecker);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TB_SetModDir);
+            this.Controls.Add(this.TB_ModDir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.B_SetWorkFolder);
             this.Controls.Add(this.TB_WorkFolder);
@@ -161,6 +205,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "SuicideMachine\'s VPK Helper";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.toolbarContexMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -182,6 +227,10 @@
         private System.Windows.Forms.ToolStripMenuItem updateFilelistAndVPKToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button TB_SetModDir;
+        private System.Windows.Forms.TextBox TB_ModDir;
+        private System.Windows.Forms.Button B_OpenChecker;
     }
 }
 
