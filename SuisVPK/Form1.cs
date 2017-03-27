@@ -101,10 +101,19 @@ namespace SuisVPK
         private void TimerCheck_Tick(object sender, EventArgs e)
         {
             //Debug.WriteLine("Timer check tick");
-            if(filesAreDifferent())
+            if(processIsntRunning() && filesAreDifferent())
             {
                 rebuildVPK();
             }
+        }
+
+        private bool processIsntRunning()
+        {
+            Process[] process = Process.GetProcessesByName(configFileRef.processName);
+            if (process.Length == 0)
+                return true;
+            else
+                return false;
         }
 
         private void rebuildVPK()
@@ -202,6 +211,7 @@ namespace SuisVPK
             TB_DevToolsPath.Text = configFileRef.vpk_location;
             TB_WorkFolder.Text = configFileRef.workDirectory;
             TB_ModDir.Text = configFileRef.modDir;
+            TB_ProcessName.Text = configFileRef.processName;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -210,6 +220,15 @@ namespace SuisVPK
             {
                 minizedIcon.Visible = false;
                 minizedIcon.Dispose();
+            }
+        }
+
+        private void B_SetProcessName_Click(object sender, EventArgs e)
+        {
+            if(TB_ProcessName.Text != "")
+            {
+                configFileRef.processName = TB_ProcessName.Text;
+                configFileRef.saveSettings();
             }
         }
     }

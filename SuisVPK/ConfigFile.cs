@@ -16,6 +16,8 @@ namespace SuisVPK
         public string originalLocalizationLocation { get; set; }
         public string postFix { get; set; }
 
+        public string processName { get; set; }
+
         public ConfigFile()
         {
             if (File.Exists(settingsFile))
@@ -55,6 +57,11 @@ namespace SuisVPK
                     line = line.Split(new char[] { ':' }, 2)[1];
                     postFix = line;
                 }
+                else if (line.StartsWith("ProcessName:"))
+                {
+                    line = line.Split(new char[] { ':' }, 2)[1];
+                    processName = line;
+                }
             }
             SR.Close();
             SR.Dispose();
@@ -67,6 +74,7 @@ namespace SuisVPK
                 + "\nModDir:" + modDir
                 + "\nOriginalLocalizationLocation:" + originalLocalizationLocation
                 + "\nPostfix:" + postFix
+                + "\nProcessName:" + processName
                 );
         }
         #endregion

@@ -46,6 +46,8 @@
             this.TB_SetModDir = new System.Windows.Forms.Button();
             this.TB_ModDir = new System.Windows.Forms.TextBox();
             this.B_OpenChecker = new System.Windows.Forms.Button();
+            this.B_SetProcessName = new System.Windows.Forms.Button();
+            this.TB_ProcessName = new System.Windows.Forms.TextBox();
             this.toolbarContexMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +79,7 @@
             // 
             // B_Watch
             // 
-            this.B_Watch.Location = new System.Drawing.Point(144, 90);
+            this.B_Watch.Location = new System.Drawing.Point(10, 90);
             this.B_Watch.Name = "B_Watch";
             this.B_Watch.Size = new System.Drawing.Size(111, 23);
             this.B_Watch.TabIndex = 6;
@@ -159,7 +161,7 @@
             // 
             // TB_SetModDir
             // 
-            this.TB_SetModDir.Location = new System.Drawing.Point(375, 62);
+            this.TB_SetModDir.Location = new System.Drawing.Point(199, 62);
             this.TB_SetModDir.Name = "TB_SetModDir";
             this.TB_SetModDir.Size = new System.Drawing.Size(75, 23);
             this.TB_SetModDir.TabIndex = 11;
@@ -171,12 +173,12 @@
             // 
             this.TB_ModDir.Location = new System.Drawing.Point(97, 64);
             this.TB_ModDir.Name = "TB_ModDir";
-            this.TB_ModDir.Size = new System.Drawing.Size(272, 20);
+            this.TB_ModDir.Size = new System.Drawing.Size(96, 20);
             this.TB_ModDir.TabIndex = 10;
             // 
             // B_OpenChecker
             // 
-            this.B_OpenChecker.Location = new System.Drawing.Point(10, 90);
+            this.B_OpenChecker.Location = new System.Drawing.Point(322, 90);
             this.B_OpenChecker.Name = "B_OpenChecker";
             this.B_OpenChecker.Size = new System.Drawing.Size(128, 23);
             this.B_OpenChecker.TabIndex = 13;
@@ -184,11 +186,30 @@
             this.B_OpenChecker.UseVisualStyleBackColor = true;
             this.B_OpenChecker.Click += new System.EventHandler(this.B_OpenChecker_Click);
             // 
+            // B_SetProcessName
+            // 
+            this.B_SetProcessName.Location = new System.Drawing.Point(375, 62);
+            this.B_SetProcessName.Name = "B_SetProcessName";
+            this.B_SetProcessName.Size = new System.Drawing.Size(75, 23);
+            this.B_SetProcessName.TabIndex = 15;
+            this.B_SetProcessName.Text = "Set";
+            this.B_SetProcessName.UseVisualStyleBackColor = true;
+            this.B_SetProcessName.Click += new System.EventHandler(this.B_SetProcessName_Click);
+            // 
+            // TB_ProcessName
+            // 
+            this.TB_ProcessName.Location = new System.Drawing.Point(280, 64);
+            this.TB_ProcessName.Name = "TB_ProcessName";
+            this.TB_ProcessName.Size = new System.Drawing.Size(89, 20);
+            this.TB_ProcessName.TabIndex = 14;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(460, 120);
+            this.Controls.Add(this.B_SetProcessName);
+            this.Controls.Add(this.TB_ProcessName);
             this.Controls.Add(this.B_OpenChecker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TB_SetModDir);
@@ -231,6 +252,8 @@
         private System.Windows.Forms.Button TB_SetModDir;
         private System.Windows.Forms.TextBox TB_ModDir;
         private System.Windows.Forms.Button B_OpenChecker;
+        private System.Windows.Forms.Button B_SetProcessName;
+        private System.Windows.Forms.TextBox TB_ProcessName;
     }
 }
 
