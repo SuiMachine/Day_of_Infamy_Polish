@@ -18,6 +18,9 @@ namespace SuisVPK
 
         public string processName { get; set; }
 
+        public bool useUTF8Copy { get; set; }
+        public string utf8CopyLocation { get; set; }
+
         public ConfigFile()
         {
             if (File.Exists(settingsFile))
@@ -62,9 +65,29 @@ namespace SuisVPK
                     line = line.Split(new char[] { ':' }, 2)[1];
                     processName = line;
                 }
+                else if (line.StartsWith("UseUTF8Copy:"))
+                {
+                    useUTF8Copy = parseBool(line.Split(new char[] { ':' }, 2)[1], false);
+                }
+                else if (line.StartsWith("UTF8CopyLocation:"))
+                {
+                    line = line.Split(new char[] { ':' }, 2)[1];
+                    utf8CopyLocation = line;
+                }
             }
             SR.Close();
             SR.Dispose();
+        }
+
+        private bool parseBool(string text, bool defaultValue = false)
+        {
+            bool val = defaultValue;
+            if(bool.TryParse(text, out val))
+            {
+                return val;
+            }
+            else
+                return defaultValue;
         }
 
         public void saveSettings()
@@ -75,6 +98,8 @@ namespace SuisVPK
                 + "\nOriginalLocalizationLocation:" + originalLocalizationLocation
                 + "\nPostfix:" + postFix
                 + "\nProcessName:" + processName
+                + "\n\nUseUTF8Copy:" + useUTF8Copy.ToString()
+                + "\nUTF8CopyLocation:" + utf8CopyLocation
                 );
         }
         #endregion

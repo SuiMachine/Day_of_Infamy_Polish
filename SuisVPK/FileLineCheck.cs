@@ -16,12 +16,18 @@ namespace SuisVPK
     {
         private ConfigFile config = null;
 
-        public static string[] convertFromUCS2(byte[] array)
+        public static string[] convertLinesFromUCS2(byte[] array)
         {
             string text = Encoding.Unicode.GetString(array);
             string[] lines = text.Split('\n');
             return lines;
         }
+
+        public static string convertTextFromUCS2(byte[] array)
+        {
+            return Encoding.Unicode.GetString(array);
+        }
+
 
         public FileLineCheck(ConfigFile configFileRef)
         {
@@ -87,8 +93,8 @@ namespace SuisVPK
             }
 
 
-            string[] orgLines = convertFromUCS2(File.ReadAllBytes(orgFile));
-            string[] traLines = convertFromUCS2(File.ReadAllBytes(traFile));
+            string[] orgLines = convertLinesFromUCS2(File.ReadAllBytes(orgFile));
+            string[] traLines = convertLinesFromUCS2(File.ReadAllBytes(traFile));
 
             output += compareVariableNames(orgLines, traLines);
 

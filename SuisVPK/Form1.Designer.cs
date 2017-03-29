@@ -48,19 +48,24 @@
             this.B_OpenChecker = new System.Windows.Forms.Button();
             this.B_SetProcessName = new System.Windows.Forms.Button();
             this.TB_ProcessName = new System.Windows.Forms.TextBox();
+            this.CB_UTF8Enabled = new System.Windows.Forms.CheckBox();
+            this.TB_UTF8CopyLocation = new System.Windows.Forms.TextBox();
+            this.B_SetUTF8Copy = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.toolbarContexMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // TB_DevToolsPath
             // 
-            this.TB_DevToolsPath.Location = new System.Drawing.Point(97, 12);
+            this.TB_DevToolsPath.Location = new System.Drawing.Point(118, 12);
             this.TB_DevToolsPath.Name = "TB_DevToolsPath";
             this.TB_DevToolsPath.Size = new System.Drawing.Size(272, 20);
             this.TB_DevToolsPath.TabIndex = 0;
             // 
             // b_devpath_set
             // 
-            this.b_devpath_set.Location = new System.Drawing.Point(375, 10);
+            this.b_devpath_set.Location = new System.Drawing.Point(396, 10);
             this.b_devpath_set.Name = "b_devpath_set";
             this.b_devpath_set.Size = new System.Drawing.Size(75, 23);
             this.b_devpath_set.TabIndex = 1;
@@ -79,7 +84,7 @@
             // 
             // B_Watch
             // 
-            this.B_Watch.Location = new System.Drawing.Point(10, 90);
+            this.B_Watch.Location = new System.Drawing.Point(10, 114);
             this.B_Watch.Name = "B_Watch";
             this.B_Watch.Size = new System.Drawing.Size(111, 23);
             this.B_Watch.TabIndex = 6;
@@ -98,7 +103,7 @@
             // 
             // B_SetWorkFolder
             // 
-            this.B_SetWorkFolder.Location = new System.Drawing.Point(375, 36);
+            this.B_SetWorkFolder.Location = new System.Drawing.Point(396, 36);
             this.B_SetWorkFolder.Name = "B_SetWorkFolder";
             this.B_SetWorkFolder.Size = new System.Drawing.Size(75, 23);
             this.B_SetWorkFolder.TabIndex = 8;
@@ -108,7 +113,7 @@
             // 
             // TB_WorkFolder
             // 
-            this.TB_WorkFolder.Location = new System.Drawing.Point(97, 38);
+            this.TB_WorkFolder.Location = new System.Drawing.Point(118, 38);
             this.TB_WorkFolder.Name = "TB_WorkFolder";
             this.TB_WorkFolder.Size = new System.Drawing.Size(272, 20);
             this.TB_WorkFolder.TabIndex = 7;
@@ -161,9 +166,9 @@
             // 
             // TB_SetModDir
             // 
-            this.TB_SetModDir.Location = new System.Drawing.Point(199, 62);
+            this.TB_SetModDir.Location = new System.Drawing.Point(189, 62);
             this.TB_SetModDir.Name = "TB_SetModDir";
-            this.TB_SetModDir.Size = new System.Drawing.Size(75, 23);
+            this.TB_SetModDir.Size = new System.Drawing.Size(45, 23);
             this.TB_SetModDir.TabIndex = 11;
             this.TB_SetModDir.Text = "Set";
             this.TB_SetModDir.UseVisualStyleBackColor = true;
@@ -171,14 +176,14 @@
             // 
             // TB_ModDir
             // 
-            this.TB_ModDir.Location = new System.Drawing.Point(97, 64);
+            this.TB_ModDir.Location = new System.Drawing.Point(118, 64);
             this.TB_ModDir.Name = "TB_ModDir";
-            this.TB_ModDir.Size = new System.Drawing.Size(96, 20);
+            this.TB_ModDir.Size = new System.Drawing.Size(65, 20);
             this.TB_ModDir.TabIndex = 10;
             // 
             // B_OpenChecker
             // 
-            this.B_OpenChecker.Location = new System.Drawing.Point(322, 90);
+            this.B_OpenChecker.Location = new System.Drawing.Point(343, 114);
             this.B_OpenChecker.Name = "B_OpenChecker";
             this.B_OpenChecker.Size = new System.Drawing.Size(128, 23);
             this.B_OpenChecker.TabIndex = 13;
@@ -188,7 +193,7 @@
             // 
             // B_SetProcessName
             // 
-            this.B_SetProcessName.Location = new System.Drawing.Point(375, 62);
+            this.B_SetProcessName.Location = new System.Drawing.Point(396, 62);
             this.B_SetProcessName.Name = "B_SetProcessName";
             this.B_SetProcessName.Size = new System.Drawing.Size(75, 23);
             this.B_SetProcessName.TabIndex = 15;
@@ -198,16 +203,67 @@
             // 
             // TB_ProcessName
             // 
-            this.TB_ProcessName.Location = new System.Drawing.Point(280, 64);
+            this.TB_ProcessName.Location = new System.Drawing.Point(294, 64);
             this.TB_ProcessName.Name = "TB_ProcessName";
-            this.TB_ProcessName.Size = new System.Drawing.Size(89, 20);
+            this.TB_ProcessName.Size = new System.Drawing.Size(96, 20);
             this.TB_ProcessName.TabIndex = 14;
+            // 
+            // CB_UTF8Enabled
+            // 
+            this.CB_UTF8Enabled.AutoSize = true;
+            this.CB_UTF8Enabled.Location = new System.Drawing.Point(208, 118);
+            this.CB_UTF8Enabled.Name = "CB_UTF8Enabled";
+            this.CB_UTF8Enabled.Size = new System.Drawing.Size(129, 17);
+            this.CB_UTF8Enabled.TabIndex = 16;
+            this.CB_UTF8Enabled.Text = "Use UTF-8 Files Copy";
+            this.CB_UTF8Enabled.UseVisualStyleBackColor = true;
+            this.CB_UTF8Enabled.CheckedChanged += new System.EventHandler(this.CB_UTF8Enabled_CheckedChanged);
+            // 
+            // TB_UTF8CopyLocation
+            // 
+            this.TB_UTF8CopyLocation.Location = new System.Drawing.Point(118, 88);
+            this.TB_UTF8CopyLocation.Name = "TB_UTF8CopyLocation";
+            this.TB_UTF8CopyLocation.Size = new System.Drawing.Size(272, 20);
+            this.TB_UTF8CopyLocation.TabIndex = 17;
+            // 
+            // B_SetUTF8Copy
+            // 
+            this.B_SetUTF8Copy.Location = new System.Drawing.Point(396, 88);
+            this.B_SetUTF8Copy.Name = "B_SetUTF8Copy";
+            this.B_SetUTF8Copy.Size = new System.Drawing.Size(75, 23);
+            this.B_SetUTF8Copy.TabIndex = 18;
+            this.B_SetUTF8Copy.Text = "Set";
+            this.B_SetUTF8Copy.UseVisualStyleBackColor = true;
+            this.B_SetUTF8Copy.Click += new System.EventHandler(this.B_SetUTF8Copy_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "UTF-8 Copy Location:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(240, 67);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Process:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 120);
+            this.ClientSize = new System.Drawing.Size(478, 146);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.B_SetUTF8Copy);
+            this.Controls.Add(this.TB_UTF8CopyLocation);
+            this.Controls.Add(this.CB_UTF8Enabled);
             this.Controls.Add(this.B_SetProcessName);
             this.Controls.Add(this.TB_ProcessName);
             this.Controls.Add(this.B_OpenChecker);
@@ -254,6 +310,11 @@
         private System.Windows.Forms.Button B_OpenChecker;
         private System.Windows.Forms.Button B_SetProcessName;
         private System.Windows.Forms.TextBox TB_ProcessName;
+        private System.Windows.Forms.CheckBox CB_UTF8Enabled;
+        private System.Windows.Forms.TextBox TB_UTF8CopyLocation;
+        private System.Windows.Forms.Button B_SetUTF8Copy;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
