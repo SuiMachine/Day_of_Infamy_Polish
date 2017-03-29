@@ -15,4 +15,4 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
-*.txt diff=astextplain merge text
+*.txt diff=localizablestrings merge text
