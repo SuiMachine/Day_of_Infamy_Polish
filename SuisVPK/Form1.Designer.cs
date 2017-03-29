@@ -71,7 +71,7 @@
             this.b_devpath_set.TabIndex = 1;
             this.b_devpath_set.Text = "Set";
             this.b_devpath_set.UseVisualStyleBackColor = true;
-            this.b_devpath_set.Click += new System.EventHandler(this.b_devpath_set_Click);
+            this.b_devpath_set.Click += new System.EventHandler(this.B_devpath_set_Click);
             // 
             // label1
             // 
@@ -172,7 +172,7 @@
             this.TB_SetModDir.TabIndex = 11;
             this.TB_SetModDir.Text = "Set";
             this.TB_SetModDir.UseVisualStyleBackColor = true;
-            this.TB_SetModDir.Click += new System.EventHandler(this.TB_SetModDir_Click);
+            this.TB_SetModDir.Click += new System.EventHandler(this.B_SetModDir_Click);
             // 
             // TB_ModDir
             // 

@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.Diagnostics;
 
 namespace SuisVPK
 {
@@ -16,6 +15,11 @@ namespace SuisVPK
     {
         private ConfigFile config = null;
 
+        /// <summary>
+        /// Used to convert a byte array if UCS-2 Little Endian to a array of string lines.
+        /// </summary>
+        /// <param name="array">Text as byte array (usually read by File.ReadAllBytes)</param>
+        /// <returns>Text as a string array</returns>
         public static string[] convertLinesFromUCS2(byte[] array)
         {
             string text = Encoding.Unicode.GetString(array);
@@ -23,12 +27,20 @@ namespace SuisVPK
             return lines;
         }
 
+        /// <summary>
+        /// Used to convert a byte array if UCS-2 Little Endian to one long string.
+        /// </summary>
+        /// <param name="array">Text as byte array (usually read by File.ReadAllBytes)</param>
+        /// <returns>Text as a string</returns>
         public static string convertTextFromUCS2(byte[] array)
         {
             return Encoding.Unicode.GetString(array);
         }
 
-
+        /// <summary>
+        /// Main constructor for the window class.
+        /// </summary>
+        /// <param name="configFileRef">A ConfigFile object to be used a s a reference.</param>
         public FileLineCheck(ConfigFile configFileRef)
         {
             InitializeComponent();
@@ -39,6 +51,8 @@ namespace SuisVPK
             TB_PostFix.Text = config.postFix;
         }
 
+
+        #region FormEvents
         private void B_BrowseTranslation_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -77,7 +91,13 @@ namespace SuisVPK
                 RB_Results.Text += compareFiles(file);
             }
         }
+#endregion
 
+        /// <summary>
+        /// Used to compare two files. The files have to have the same relative path.
+        /// </summary>
+        /// <param name="file">A relative file path</param>
+        /// <returns></returns>
         private string compareFiles(string file)
         {
             string orgFile = Path.Combine(config.originalLocalizationLocation, file);
@@ -102,6 +122,12 @@ namespace SuisVPK
             return output;
         }
 
+        /// <summary>
+        /// Compares variable names from arrays.
+        /// </summary>
+        /// <param name="orgFile">Variable arrays from original language file.</param>
+        /// <param name="traLines">Variable arrays from a translated file.</param>
+        /// <returns>A string listing which variables are missing in translated file.</returns>
         private string compareVariableNames(string[] orgFile, string[] traLines)
         {
             string[] varsOrg = getVariableNames(orgFile);
@@ -119,6 +145,11 @@ namespace SuisVPK
 
         }
 
+        /// <summary>
+        /// Gets names of variables from a text file... for the most part.
+        /// </summary>
+        /// <param name="file">Filepath to a file that is to be read.</param>
+        /// <returns></returns>
         private string[] getVariableNames(string[] file)
         {
             List<string> variableNames = new List<string>();
@@ -153,11 +184,16 @@ namespace SuisVPK
 
         char[] forbiddenCharactersForString = {' ', '\'', '/', '\\' };
 
+        /// <summary>
+        /// Usually finds a position of closing quotation mark.... usually.
+        /// </summary>
+        /// <param name="startLoc">Location of a first quotation mark</param>
+        /// <param name="line">Line to find closing quotation mark in</param>
+        /// <returns>Index of closing quotation mark or -1 if it has none.</returns>
         private int findEndVarName(int startLoc, string line)
         {
             for(int i = startLoc+1; i<line.Length; i++)
             {
-                Debug.WriteLineIf(line.Contains("radial_moving_to_objective_subtitle_cp"), line[i]);
                 char temp = line[i];
                 if (forbiddenCharactersForString.Contains(temp) )
                 {
@@ -171,6 +207,10 @@ namespace SuisVPK
             return -1;
         }
 
+        /// <summary>
+        /// Creates a list of files in a directory with original language files.
+        /// </summary>
+        /// <returns>A list of txt files</returns>
         private List<string> createList()
         {
             string[] Directories = Directory.GetDirectories(config.originalLocalizationLocation, "*", SearchOption.AllDirectories);
@@ -199,11 +239,6 @@ namespace SuisVPK
                     string addFile = file.Remove(0, pathLenght+1);
                     files.Add(addFile);
                 }
-            }
-
-            foreach(string file in files)
-            {
-                Debug.WriteLine(file);
             }
             return files;
         }

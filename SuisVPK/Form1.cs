@@ -33,8 +33,9 @@ namespace SuisVPK
             contexTooltipMenu.MenuItems.Add("Exit");
         }
 
-        #region ButtonEvents
-        private void b_devpath_set_Click(object sender, EventArgs e)
+        #region FormEvents
+        #region SetButtons
+        private void B_devpath_set_Click(object sender, EventArgs e)
         {
             if (Directory.Exists(TB_DevToolsPath.Text) && File.Exists(Path.Combine(TB_DevToolsPath.Text, vpk_exe)))
             {
@@ -54,10 +55,42 @@ namespace SuisVPK
             configFileRef.saveSettings();
         }
 
+        private void B_SetProcessName_Click(object sender, EventArgs e)
+        {
+            if (TB_ProcessName.Text != "")
+            {
+                configFileRef.processName = TB_ProcessName.Text;
+                configFileRef.saveSettings();
+            }
+        }
+
+        private void B_SetModDir_Click(object sender, EventArgs e)
+        {
+            if (TB_ModDir.Text != "")
+            {
+                configFileRef.modDir = TB_ModDir.Text;
+                configFileRef.saveSettings();
+            }
+        }
+        private void B_SetUTF8Copy_Click(object sender, EventArgs e)
+        {
+            if (TB_UTF8CopyLocation.Text != "")
+            {
+                configFileRef.utf8CopyLocation = TB_UTF8CopyLocation.Text;
+                configFileRef.saveSettings();
+            }
+        }
+        private void CB_UTF8Enabled_CheckedChanged(object sender, EventArgs e)
+        {
+            configFileRef.useUTF8Copy = CB_UTF8Enabled.Checked;
+            TB_UTF8CopyLocation.Enabled = configFileRef.useUTF8Copy;
+        }
+        #endregion
+        #region OtherButtons
         private void B_Watch_Click(object sender, EventArgs e)
         {
 
-            if(configFileRef .vpk_location!= "" && Directory.Exists(configFileRef.vpk_location) && configFileRef.workDirectory != "" && Directory.Exists(configFileRef.workDirectory))
+            if (configFileRef.vpk_location != "" && Directory.Exists(configFileRef.vpk_location) && configFileRef.workDirectory != "" && Directory.Exists(configFileRef.workDirectory))
             {
                 fileDictionary.Clear();
                 createList();
@@ -68,6 +101,65 @@ namespace SuisVPK
                 timerCheck.Start();
             }
         }
+
+        private void B_OpenChecker_Click(object sender, EventArgs e)
+        {
+            FileLineCheck flc = new FileLineCheck(configFileRef);
+            flc.ShowDialog();
+            updateConfigInformation();
+            flc.Dispose();
+        }
+        #endregion
+        #region FormBehaviour
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                minizedIcon.Visible = true;
+                this.Hide();
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                minizedIcon.Visible = false;
+                timerCheck.Stop();
+            }
+        }
+
+        private void minizedIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void updateFilelistAndVPKToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            createList();
+            rebuildVPK();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TimerCheck_Tick(object sender, EventArgs e)
+        {
+            if (processIsntRunning() && filesAreDifferent())
+            {
+                rebuildVPK();
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (minizedIcon.Visible)
+            {
+                minizedIcon.Visible = false;
+                minizedIcon.Dispose();
+            }
+        }
+        #endregion
+        #endregion
 
         private void createList()
         {
@@ -100,20 +192,13 @@ namespace SuisVPK
             {
                 FileInfo f = new FileInfo(file);
                 fileDictionary.Add(file, f.LastWriteTimeUtc);
-                Debug.WriteLine(file + "   " + f.LastWriteTimeUtc.ToShortTimeString());
-            }
-
-        }
-        #endregion
-
-        private void TimerCheck_Tick(object sender, EventArgs e)
-        {
-            if(processIsntRunning() && filesAreDifferent())
-            {
-                rebuildVPK();
             }
         }
 
+        /// <summary>
+        /// Checks if game process isn't running to prevent updating VPK if game is running.
+        /// </summary>
+        /// <returns>True isn't running, false if it's running.</returns>
         private bool processIsntRunning()
         {
             Process[] process = Process.GetProcessesByName(configFileRef.processName);
@@ -123,6 +208,9 @@ namespace SuisVPK
                 return false;
         }
 
+        /// <summary>
+        /// Rebuilds VPK file and moves it to a right location
+        /// </summary>
         private void rebuildVPK()
         {
             if(configFileRef.useUTF8Copy)
@@ -147,6 +235,9 @@ namespace SuisVPK
             File.Copy(from, to);
         }
 
+        /// <summary>
+        /// Builds a list of files from a translation directory, reads them and saves them as UTF-8 in seperate directory
+        /// </summary>
         private void rebuildUTF8PreviewFiles()
         {
             //Pretty much a copy of the other thing, except this one works with local variables related to utf8 copy directory
@@ -218,11 +309,21 @@ namespace SuisVPK
             }
         }
 
+        /// <summary>
+        /// Converts an absolute path to relative one.
+        /// </summary>
+        /// <param name="file_path">Absolute file path to a file</param>
+        /// <param name="directory_path">Directory path.</param>
+        /// <returns>Relative path as a string.</returns>
         private string absolutePathToRelative(string file_path, string directory_path)
         {
             return file_path.Substring(directory_path.Length + 1, file_path.Length - directory_path.Length-1);
         }
 
+        /// <summary>
+        /// Checks if the file has been modified.
+        /// </summary>
+        /// <returns>True if were modified, false if weren't.</returns>
         private bool filesAreDifferent()
         {
             foreach(string file in fileDictionary.Keys)
@@ -242,54 +343,9 @@ namespace SuisVPK
             return false;
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Minimized)
-            {
-                minizedIcon.Visible = true;
-                this.Hide();
-            }
-            else if (this.WindowState == FormWindowState.Normal)
-            {
-                minizedIcon.Visible = false;
-                timerCheck.Stop();
-            }
-        }
-
-        private void minizedIcon_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void updateFilelistAndVPKToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            createList();
-            rebuildVPK();
-        }
-
-        private void TB_SetModDir_Click(object sender, EventArgs e)
-        {
-            if(TB_ModDir.Text != "")
-            {
-                configFileRef.modDir = TB_ModDir.Text;
-                configFileRef.saveSettings();
-            }
-        }
-
-        private void B_OpenChecker_Click(object sender, EventArgs e)
-        {
-            FileLineCheck flc = new FileLineCheck(configFileRef);
-            flc.ShowDialog();
-            updateConfigInformation();
-            flc.Dispose();
-        }
-
+        /// <summary>
+        /// Updates displayed information with the ones from ConfigFile class.
+        /// </summary>
         private void updateConfigInformation()
         {
             TB_DevToolsPath.Text = configFileRef.vpk_location;
@@ -301,39 +357,6 @@ namespace SuisVPK
             TB_UTF8CopyLocation.Enabled = configFileRef.useUTF8Copy;
             TB_UTF8CopyLocation.Text = configFileRef.utf8CopyLocation;
 
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (minizedIcon.Visible)
-            {
-                minizedIcon.Visible = false;
-                minizedIcon.Dispose();
-            }
-        }
-
-        private void B_SetProcessName_Click(object sender, EventArgs e)
-        {
-            if(TB_ProcessName.Text != "")
-            {
-                configFileRef.processName = TB_ProcessName.Text;
-                configFileRef.saveSettings();
-            }
-        }
-
-        private void CB_UTF8Enabled_CheckedChanged(object sender, EventArgs e)
-        {
-            configFileRef.useUTF8Copy = CB_UTF8Enabled.Checked;
-            TB_UTF8CopyLocation.Enabled = configFileRef.useUTF8Copy;
-        }
-
-        private void B_SetUTF8Copy_Click(object sender, EventArgs e)
-        {
-            if(TB_UTF8CopyLocation.Text != "")
-            {
-                configFileRef.utf8CopyLocation = TB_UTF8CopyLocation.Text;
-                configFileRef.saveSettings();
-            }
         }
     }
 }
