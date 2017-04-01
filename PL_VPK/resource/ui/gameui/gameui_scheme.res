@@ -292,7 +292,7 @@ Scheme
 		SliderControl.BackgroundFocusColor		"150 150 150 255"
 		SliderControl.BorderColor 				"InsLightGrey"
 
-		KeyBindings.ActionColumnWidth			"175"
+		KeyBindings.ActionColumnWidth			"250"
 		KeyBindings.KeyColumnWidth				"100"
 		KeyBindings.HeaderFont					"Default"
 		KeyBindings.KeyFont						"Default"
