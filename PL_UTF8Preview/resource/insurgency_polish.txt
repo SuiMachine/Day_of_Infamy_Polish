@@ -1221,7 +1221,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "GameUI_Quickplay_ConnectingTo"		"Łącze z %s1 (%s2)..."
 
 // Menu
-"GameUI_Main"						"Main"
+"GameUI_Main"						"Menu Główne"
 "GameUI_Multiplayer"				"Wieloosobowa"
 "GameUI_Coop"						"Kooperacja"
 "GameUI_Compete"					"Rywalizacja"
