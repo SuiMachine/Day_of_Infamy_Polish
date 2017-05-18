@@ -588,16 +588,18 @@
 		"CP_RailwayDock"						"Rampa Ładunkowa"
 		"CP_RailwaySignalBox"					"Nastawnia"
 		"CP_MansionFrontYard"					"Rezydencja"
-		"CP_WarehouseOffice"					"Warehouse Office"
-		"CP_LivingQuarters"						"Living Quarters"
+		"CP_WarehouseOffice"					"Biuro Magazynu"
+		"CP_LivingQuarters"						"Obszar Mieszkalny"
 		"CP_Mansion"							"Rezydencja"
 		"CP_OldFactory"							"Stara Fabryka"
 		"CP_Administration"						"Administracja"
 		"CP_RailwayDocks"						"Rampy Ładunkowe"
 		"CP_TrainPlatform"						"Peron"
-		"CP_FactoryHall"						"Factory Hall"
-		"CP_AssemblyFactory"					"Assembly Factory"
-		"CP_Intel"								"Intel"
+		"CP_FactoryHall"						"Hala Fabryki"
+		"CP_AssemblyFactory"					"Hala Montażowa"
+		//Tymczasowe, bo NewWorldInteractive schrzanił
+		"AssemblyFactory"					"Hala Montażowa"
+		"CP_Intel"								"Informacje Wywiadowcze"
 
 		// HUD
 		// Gameplay notification
