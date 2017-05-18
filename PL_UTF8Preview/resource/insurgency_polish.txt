@@ -84,7 +84,7 @@
 // Tutorial tips
 
 "Hint_Slide"				"Wślizg (dotarcie do osłony)"
-"Hint_Focus"				"Wstrzymaj oddech poddczas celowania"
+"Hint_Focus"				"Wstrzymaj oddech podczas celowania"
 "Hint_Plywood"				"Strzel przez sklejkę"
 "Hint_Primary"				"Wyposaż podstawową broń"
 "Hint_Attachments"			"Wybierz dodatki"
@@ -115,7 +115,7 @@
 "Killed_Teammate"							"Zabiłeś członka !"
 "Hint_try_not_to_injure_teammates"			"Staraj się nie ranić swoich kompanów."
 "Game_teammate_attack"						"%s1 zaatakował kompana (%s2)."
-"Hint_tk_punished"							"Ukarany za zabcie kompana"
+"Hint_tk_punished"							"Ukarany za zabicie kompana"
 "Game_idle_kick"							"%s1 zbyt długo był bezczynny i został wyrzucony."
 
 "Msg_Dominating"			"%s1 Dominuje"
@@ -177,7 +177,7 @@
 "game_gm_invalid"			"Nieprawidłowy"
 "game_gm_outpost"			"Outpost"
 "game_gm_checkpoint"		"Checkpoint"
-"game_gm_conquest"			"Conquest"
+"game_gm_conquer"			"Conquer"
 "game_gm_hunt"				"Hunt"
 "game_gm_survival"			"Survival"
 
@@ -189,7 +189,7 @@
 
 Wysyłamy Cię na zaawansowane szkolenie do bazy w Iraku. Twój końcowy wynik szkolenia uzależniony jest bezpośrednio od tego, jak bardzo zastosujesz się do wskazówek instruktora.
 
-Wsłuchaj się w jego słowa ale nie zapominaj o tym, że sam też możesz podejmować decyzje i dowolnie modyfikować uzbrojenie. W kóncu to Ty jesteś na polu walki i sam wiesz najlepiej, czego Ci potrzeba w danej sytuacji.
+Wsłuchaj się w jego słowa ale nie zapominaj o tym, że sam też możesz podejmować decyzje i dowolnie modyfikować uzbrojenie. W końcu to Ty jesteś na polu walki i sam wiesz najlepiej, czego Ci potrzeba w danej sytuacji.
 
 Powodzenia!"
 
@@ -199,7 +199,7 @@ Każdy cel przejęty od wroga natychmiast odradza wszystkich twoich poległych k
 
 Pamiętaj, aby bronić swoich zapasów broni. Gdy je stracisz, Twoja drużyna nie będzie miała możliwości kumulowania dodatkowych fal odrodzeń, gdy odbijecie punkt z rąk wroga."
 
-"game_description_strike" "Na mapie znajduja się składy broni, które należą do wroga.
+"game_description_strike" "Na mapie znajdują się składy broni, które należą do wroga.
 
 Zadaniem drużyny atakującej jest ich odnalezienie i wysadzenie. Jak członek drużyny atakujących, upewnij się, że twój zespół posiada ładunki wybuchowe!
 
@@ -211,9 +211,9 @@ Zadaniem drużyny broniącej jest uniemożliwienie wysadzenia składów z broni�
 
 Jako strona broniąca, musisz przeszkodzić wrogom w zniszczeniu wszystkich waszych zapasów broni. 
 
-Odrodzenia będą dostępne tylko gdy jednen z zapasów zostanie zniszczony. Likwidacja całej drużyny wroga jest pewną ścieżką do zwycięstwa."
+Odrodzenia będą dostępne tylko gdy jeden z zapasów zostanie zniszczony. Likwidacja całej drużyny wroga jest pewną ścieżką do zwycięstwa."
 
-"game_description_ambush"		"Drużyna eksortująca VIP-a musi go ochraniać i doprowadzić do miejsca ewakuacji. 
+"game_description_ambush"		"Drużyna eskortująca VIP-a musi go ochraniać i doprowadzić do miejsca ewakuacji. 
 
 Drużyna przeciwna ma za zadanie odnaleźć VIP-a i go zlikwidować.
 
@@ -249,13 +249,13 @@ Atakujący zaczynają ze znacznie mniejszą ilością dostępnych odrodzeń oraz
 
 Przejmij kontrolę nad całym rejonem albo zabij wszystkich wrogów by wygrać.
 
-Pamietaj o ochronie własnych składów z bronią. Ich utrata doprowadzi Cię do porażki!"
+Pamiętaj o ochronie własnych składów z bronią. Ich utrata doprowadzi Cię do porażki!"
 
 "game_description_occupy"	"Kontroluj główny punkt mapy, by zapewnić sobie nieprzerwany dostęp do fal odrodzeń.
 
 Zablokuj przeciwnikowi dostęp do głównego punktu mapy, by pozbawić go możliwości zdobywania nowych fal odrodzeń i wygrać rundę."
 
-"game_description_hunt"		"W tym scenariszu będziesz grać ze znajomymi przeciwko botom.
+"game_description_hunt"		"W tym scenariuszu będziesz grać ze znajomymi przeciwko botom.
 
 Wyeliminuj wszystkich rebeliantów w obszarze działań i zniszcz wszystkie zapasy broni.
 
@@ -328,7 +328,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 
 "VIP_EscortHint"			"Odeskortuj %s1 w w bezpieczne miejsce!"
 "VIP_YouAreVipHint"			"Jesteś VIP'em. Trzymaj się drużyny!"
-"VIP_PreventEscapeHint"		"Uniemozliw VIP'owi ucieczkę!"
+"VIP_PreventEscapeHint"		"Uniemożliw VIP'owi ucieczkę!"
 "Strike_DestroyCaches" 		"Zniszczy wszystkie składy broni wroga!"
 "Strike_ProtectCaches" 		"Za wszelką cenę chroń swoje składy broni!"
 "Elimination_DestroyCache" 	"Zniszcz skład broni wroga!"
@@ -346,7 +346,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "Invasion_Defend"			"Utrzymać pozycję za wszelką cenę!"
 "Invasion_Fallback"			"Wróg ma przewagę! Wycofać się i przegrupować!"
 "Checkpoint_Objective"		"Przejmij punkt i chroń go przed odbiciem!"
-"Conquer_Objective"			"Wkrocz na terytorium wroga i oszyść wszystkie cele!"
+"Conquer_Objective"			"Wkrocz na terytorium wroga i oczyść wszystkie cele!"
 "Hunt_Objective"			"Wyeliminuj wszystkie siły wroga w obszarze działań!"
 "Outpost_Objective"			"Za wszelką cenę obroń posterunek i skład broni!"
 "Checkpoint_Hold"			"Siły wroga w natarciu!"
@@ -526,7 +526,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "weapon_ump45"				"UMP-45"
 "weapon_ump45_desc"			"Lekki karabin maszynowy kaliber .45ACP wyprodukowany w Niemczech (2,53 kg)."
 "weapon_rpk"				"RPK"
-"weapon_rpk_desc"			"Lekki karabin maszynowy, wyprodukowamy w Związku Radzieckim (4,83 kg)."
+"weapon_rpk_desc"			"Lekki karabin maszynowy, wyprodukowany w Związku Radzieckim (4,83 kg)."
 "weapon_m249"				"M249"
 "weapon_m249_desc"			"Karabin maszynowy produkcji amerykańskiej (7,5 kg)."
 "weapon_rpg7"				"RPG-7"
@@ -536,7 +536,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "weapon_m67"				"M67"
 "weapon_m67_desc"			"Granat odłamkowy (0,41 kg)."
 "weapon_f1"					"Granat F1"
-"weapon_f1_desc"			"Radziecki granat fragmentacyjny (0,6 kg)."
+"weapon_f1_desc"			"Radziecki granat odłamkowy (0,6 kg)."
 "weapon_m18"				"M18"
 "weapon_m18_desc"			"Granat dymny (0,54 kg)."
 "weapon_m84"				"M84"
@@ -706,7 +706,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "INS_Chat_Party"			"(Party) %s1"
 "INS_Name_Change"			"* %s1 zmienił nick na %s2"
 "chat_filterbutton"			"Filtry"
-"filter_joinleave"			"Wejść/Wyjśc"
+"filter_joinleave"			"Wejść/Wyjście"
 "filter_namechange"			"Zmiana Nazw"
 "filter_publicchat"			"Czat Publiczny"
 "filter_servermsg"			"Wiadomość serwera"
@@ -726,7 +726,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 		
 "HL2_SetupMicrophone"		"ZAAWANSOWANE USTAWIENIA MIKROFONU"
 "HL2_SetupMicrophoneSteam"	"Dostęp do Społeczności Steam podczas grania jest obecnie wyłączony.\nWłącza dostęp do Społeczności Steam podczas grania albo skonfiguruj ustawienia głosu w kliencie Steam."
-"HL2_Enable_Commentary"		"Włącz scieżkę komentarza"
+"HL2_Enable_Commentary"		"Włącz ścieżkę komentarza"
 
 "Spec_Spectating"						"OGLĄDASZ"
 "Spec_PlayerItem_Team"					"%s1"
@@ -738,8 +738,8 @@ Przetrwaj i odeprzyj ataki wroga!"
 "Spec_Skirmish_LostCache"				"Zapas Twojej drużyny został zniszczony. Odrodzenia zostały zmniejszone."
 "Spec_RespawnNeedObjective"				"Odrodzenie będzie dostępne po przejęciu punktu."
 "Spec_RespawnNeedsObjectives"			"Odrodzenie będzie dostępne jeśli %s1 punkt(y) zostaną przejęte."
-"Spec_RespawnSearchDestroy"				"Odrodzenie będzie dostępnę gdy obiekt zostanie zniszczony."
-"Spec_RespawnWaitingForWave"			"Czekaj na odrodzenie..."
+"Spec_RespawnSearchDestroy"				"Odrodzenie będzie dostępne gdy obiekt zostanie zniszczony."
+"Spec_RespawnWaitingForWave"			"Oczekiwanie na odrodzenie..."
 "Spec_RespawnWaitingForSpawnClear"		"Zasoby opanowane przez wroga..."
 "Spec_Training"							"Przygotuj się! Odrodzenie wkrótce..."
 "Spec_Strike_Attack"					"Twój zespół wygra dzięki zniszczeniu składu broni wroga bądź po wyeliminowaniu wszystkich przeciwników."
@@ -758,7 +758,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "Spec_PreviousPlayer"					"Poprzedni Gracz"
 "Spec_ChangeCamera"						"Zmień kamerę"
 "Spec_ToggleXray"						"Włącz X-ray"
-"Spec_PossessBot"						"Przejmij Bot'a"
+"Spec_PossessBot"						"Przejmij Bota"
 
 "ins_name_change_limit"					" * Poczekaj %s1 sekund zanim spróbujesz zmienić imię."
 "ins_name_change"						" * %s1 zmienił nazwę na %s2"
@@ -816,11 +816,11 @@ Przetrwaj i odeprzyj ataki wroga!"
 "Cell_Bravo"							"[B] Drużyna zwiadowcza"
 "Cell_Charlie"							"[C] Drużyna wsparcia"
 "Cell_Delta"							"[D] Drużyna"
-"Cell_Echo"								"[E] Druzyna"
+"Cell_Echo"								"[E] Drużyna"
 
 // competitive fire teams
 "Comp_Squad_Security"					"Grupa Alfa"
-"Comp_Squad_Insurgents"					"Jednsotka rebelii"
+"Comp_Squad_Insurgents"					"Jednostka rebelii"
 
 // vip teams
 "Fireteam_Escort_Group"					"[A] Eskorta"
@@ -1029,7 +1029,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "radial_watch_area"						"Obserwować teren"
 "radial_go"								"Na przód"
 "radial_report_status"					"Meldować"
-"radial_stick_together"					"Trzymac się razem"
+"radial_stick_together"					"Trzymać się razem"
 "radial_hold_position"					"Utrzymać pozycję"
 "radial_spread_out"						"Rozproszyć się"
 
@@ -1085,7 +1085,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "radial_report_status_subtitle"			"Meldować."
 "radial_hold_position_subtitle"			"Utrzymać pozycję!"
 "radial_hold_position_subtitle_cp"		"Utrzymać pozycję na %s1!"
-"radial_stick_together_subtitle"		"Trzymac się razem!"
+"radial_stick_together_subtitle"		"Trzymać się razem!"
 
 // Post Round Lobby
 "prlobby_personal_stats"				"Statystyki"
@@ -1188,7 +1188,7 @@ Przetrwaj i odeprzyj ataki wroga!"
 "GameUI_Night"						"Noc"
 
 // Stats
-"GameUI_Objectives"					"Objekty"
+"GameUI_Objectives"					"Cele"
 "GameUI_KillsSlashDeaths"			"Zabójstwa / Zgony"
 "GameUI_ShotsFired"					"Oddane strzały"
 "GameUI_ShotsSlashMunitions"		"Strzały / Amunicja"

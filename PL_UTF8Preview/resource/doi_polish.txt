@@ -164,6 +164,15 @@
 		"unit_commonwealth_grenadier_desc"			"PLACEHOLDER TEXT! REPLACE ME!"
 		"unit_commonwealth_fusilier"				"Royal Fusiliers"
 		"unit_commonwealth_fusilier_desc"			"Królewscy Fizylierzy są pułkiem utworzonym w 1685 roku. Podczas Drugiej Wojny Światowej, bataliony 1-wszy, 2-gi, 8-my i 9-ty służyły podczas kampanii Włoskiej. 2gi batalion uczestniczył również w walkach o Francję w 1940, na koniec ewakuując się z Dunkierki.\n\nPo zrzucie w Tunezji, bataliony 8-my i 9-ty wylądowały w miejscowości Salerno. Walczyły w bitwie o Monte Cassino, wspierane przez bataliony 1-wszy i 2-gi. Łącznie, regiment otrzymał 36 odznaczeń za zasługi podczas wojny."
+		"unit_commonwealth_17thaustralian"			"17th Australian Battalion"
+		"unit_commonwealth_17thaustralian_desc"		"PLACEHOLDER TEXT! REPLACE ME!"
+		"unit_commonwealth_australian"				"2nd Australian Imperial Force"
+		"unit_commonwealth_australian_desc"			"PLACEHOLDER TEXT! REPLACE ME!"
+		"unit_commonwealth_loyal_edmonton"			"Loyal Edmonton Regiment"
+		"unit_commonwealth_loyal_edmonton_desc"		"PLACEHOLDER TEXT! REPLACE ME!"
+		"unit_commonwealth_blackwatch"				"The Black Watch"
+		"unit_commonwealth_blackwatch_desc"			"PLACEHOLDER TEXT! REPLACE ME!"
+		
 		// Axis
 		"unit_default_axis"							"Wehrmacht"
 		"unit_default_axis_desc"					"Po powstaniu Trzeciej Rzeszy pod władzą Adolfa Hitlera, Niemcy naruszyły Traktaty Wersalskie, w tajemnicy uzbrajając swoją armię.\n\nWe wrześniu 1939 roku, Niemcy dokonały uderzenia na Polskę wykorzystując koncepcję Blitzkriegu (Wojny Błyskawicznej), odnosząc wiele zwycięstw i szybko opanowując Zachodnią Europę oraz Rosję.\n\nW Wehrmachcie, do czasu rozbicia go przez wojska Aliantów w 1945 roku, służyło ponad 13 milionów ludzi, w większości żołnierzy poborowych."
@@ -185,6 +194,9 @@
 		"unit_german_1stinfantry_desc"				"Formed in 1934 during the rearmament of Germany's military, the 1. Infanterie-Division advanced towards Warsaw in the September 1939 Blitzkrieg campaign.\n\nThey fulfilled a minor role during the 1940 invasion of France and later returned to the Eastern front.\n\nDuring Operation Barbarossa, they advanced towards Leningrad and fought there until 1944. The division transferred to the Ukrainian front and fought for the defense of the German Reich before surrendering to the Soviets in April 1945."
 		"unit_german_17thpanzer"					"17. Panzergrenadier Division"
 		"unit_german_17thpanzer_desc"				""
+		"unit_german_272grenadier"					"272. Volks-Grenadier Division"
+		"unit_german_272grenadier_desc"				"PLACEHOLDER TEXT! REPLACE ME!"
+		
 		// U.S.
 		"unit_default_americans"					"U.S Army"
 		"unit_default_americans_desc"				"The United States entered World War II with the Allies following the Japanese attack on Pearl Harbour in December 1941.\n\nWith a \"Europe first\" strategy, the Allies landed in North Africa by the end of 1942 to open a second front and relieve German pressure on the Soviets.\n\nThe 1943 invasions of Sicily and mainland Italy brought the U.S. and Commonwealth armies to mainland Europe. Operation Overlord in June 1944 brought the forces into France, where they continued to fight through Belgium, the Netherlands, and finally into Germany.\n\nThe United States Army was the backbone of their fighting force, spearheaded by their infantry divisions."
@@ -205,6 +217,8 @@
 		"unit_american_28thdivision_desc"			"PLACEHOLDER TEXT! REPLACE ME!"
 		"unit_american_29thinfantry"				"29th Infantry Division"
 		"unit_american_29thinfantry_desc"			"PLACEHOLDER TEXT! REPLACE ME!"
+		"unit_american_761blackpanther"				"761st Black Panthers, Tank Battalion"
+		"unit_american_761blackpanther_desc"		"PLACEHOLDER TEXT! REPLACE ME!"
 
 		// Inventory
 		"inventory_main_category_0"					"Główna"
@@ -229,6 +243,7 @@
 		"upgrade_slot_siderail"						"Siderail"
 		"upgrade_slot_underbarrel"					"Nasadka"
 		"upgrade_slot_aesthetic"					"Wygląd"
+		"upgrade_slot_skin"							"Skórka"
 		"upgrade_slot_misc"							"Inne"		
 		"gear_slot_backpack"						"Plecak"	
 		"gear_slot_vest"							"Kamizelka"		
@@ -291,6 +306,9 @@
 		"weapon_sten_mk2"						"Sten Mk.II"
 		"weapon_sten_mk5"						"Sten Mk.V"
 		"weapon_sten_desc"						"Standardowy brytyjski pistolet maszynowy (magazynek na 32 naboje)"
+		"weapon_owen"							"Owen Mk.I"
+		"weapon_owen_mk3"						"Owen Mk.III"
+		"weapon_owen_desc"						"Specjalny australijski pistolet maszynowy (zaokrąglony magazynek na 33 naboi)"		
 		"weapon_bren"							"Karabin maszynowy Bren"
 		"weapon_bren_desc"						"Standard issue British automatic rifle (30 round mag)"
 		"weapon_lewis"							"Karabin maszynowy Lewis"
@@ -563,6 +581,11 @@
 	    "CP_MGNest"								"Gniazdo K.M."
 		"CP_MedicalArea"						"Strefa sanitarna"
 		"CP_ApartmentsEntrance"					"Wejście do apartamentów"	
+		"CP_WarehouseOffice"					"Warehouse Office"
+		"CP_LivingQuarters"						"Living Quarters"
+		"CP_FactoryHall"						"Factory Hall"
+		"CP_AssemblyFactory"					"Assembly Factory"
+		"CP_Intel"								"Intel"
 
 		// HUD
 		// Gameplay notification

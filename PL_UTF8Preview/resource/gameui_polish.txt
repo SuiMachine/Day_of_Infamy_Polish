@@ -42,6 +42,7 @@
 		"GameUI_VideoSettings"				"ustawienia grafiki"
 		"GameUI_AudioSettings"				"Ustawienia dźwięku"
 		"GameUI_hud_settings"				"Ustawienia interfejsu"
+		"GameUI_EarlyAccessPatch"			"Przedpremierowa aktualizacja"
 		
 		"GameUI_Console"						"Konsola"
 		"GameUI_VipPreference"					"Preferencje trybu VIP"
