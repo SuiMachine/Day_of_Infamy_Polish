@@ -476,6 +476,7 @@
 		
 		// Names
 		"CP_AlliedRadio"						"Radio Aliantów"
+		"CP_Allied_Radio"						"Radio Aliantów"	//bo New World nie może nawet swoich zasad się trzymać.
 		"CP_AxisRadio"							"Radio Osi"	
 		"CP_AidStation"							"Punkt Medyczny"
 		"CP_AlliedForwardHQ"					"Frontowy Sztab Aliantów"
@@ -597,8 +598,6 @@
 		"CP_TrainPlatform"						"Peron"
 		"CP_FactoryHall"						"Hala Fabryki"
 		"CP_AssemblyFactory"					"Hala Montażowa"
-		//Tymczasowe, bo NewWorldInteractive schrzanił
-		"AssemblyFactory"					"Hala Montażowa"
 		"CP_Intel"								"Informacje Wywiadowcze"
 
 		// HUD
