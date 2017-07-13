@@ -18,9 +18,13 @@
 		"sicily"								"Sycylia"
 		"sicily_subtext"						"Włochy, 1943"		
 		"bastogne"								"Bastogne"
-		"bastogne_subtext"						"Belgia, 1944"		
+		"bastogne_subtext"						"Belgia, 1944"	
+		"breville"								"Bréville"
+		"breville_subtext"						"Francja, 1944"		
 		"crete"									"Kreta"
-		"crete_subtext"							"Greckie wyspy, 1941"		
+		"crete_subtext"							"Greckie wyspy, 1941"
+		"dunkirk"								"Dunkierka"
+		"dunkirk_subtext"						"Francja, 1940"		
 		"ortona"								"Ortona"
 		"ortona_subtext"						"Włochy, 1943"		
 		"comacchio"								"Comacchio"
@@ -496,6 +500,7 @@
 		"CP_BunkerEntrance"						"Wejście do Bunkra"
 		"CP_BunkerSafeGuard"					"Bunker Safe Guard"
 		"CP_BunkerStaging"						"Bunker Staging"
+		"CP_Butcher"							"Rzeźnik"
 		"CP_Cafe"								"Kawiarnia"
 		"CP_Caffe"								"Caffe"
 		"CP_Casa"								"Casa"
@@ -600,6 +605,8 @@
 		"CP_FactoryHall"						"Hala Fabryki"
 		"CP_AssemblyFactory"					"Hala Montażowa"
 		"CP_Intel"								"Informacje Wywiadowcze"
+		"CP_PlaneCrash"							"Rozbity Samolot"
+		"CP_RepairShop"							"Warsztat"
 
 		// HUD
 		// Gameplay notification
