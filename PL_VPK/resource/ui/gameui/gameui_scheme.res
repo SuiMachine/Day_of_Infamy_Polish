@@ -379,6 +379,10 @@ Scheme
 		FooterButton.AllCaps					"1"
 		FooterButton.TextMinWidth				"0"
 		FooterButton.TextMinWidthDialog			"0"
+		
+		FooterButton.SoundArmed					"ui/menu_focus.wav"
+		FooterButton.SoundDepressed				"ui/sfx/click_05.wav"
+		FooterButton.SoundReleased				"ui/menu_focus.wav"
 
 		// HybridButton - Dialog List
 		DialogListButton.TextColor				"InsWhite75"
@@ -400,6 +404,10 @@ Scheme
 		DialogListButton.AllCaps				"1"
 		DialogListButton.TextMinWidth			"0"
 		DialogListButton.TextMinWidthDialog		"200"
+		
+		DialogListButton.SoundArmed				"ui/menu_focus.wav"
+		DialogListButton.SoundDepressed			"ui/sfx/click_05.wav"
+		DialogListButton.SoundReleased			"ui/menu_focus.wav"
 
 		// HybridButton - Dialog List
 		LeftDialogButton.TextColor				"InsWhite75"
@@ -500,7 +508,7 @@ Scheme
 		MenuHeaderButtonQuit.TextAlignment			center
 		MenuHeaderButtonQuit.AllCaps				1
 		MenuHeaderButtonQuit.SoundArmed				UI/menu_focus.wav
-		MenuHeaderButtonQuit.SoundDepressed			UI/menu_open.wav
+		MenuHeaderButtonQuit.SoundDepressed			"ui/sfx/click_05.wav"
 
 		MenuHeaderButton.TextColor					InsWhite
 		MenuHeaderButton.TextColor_Armed			InsWhite75
@@ -510,12 +518,12 @@ Scheme
 		MenuHeaderButton.TextAlignment				center
 		MenuHeaderButton.AllCaps					1
 		MenuHeaderButton.SoundArmed					UI/menu_focus.wav
-		MenuHeaderButton.SoundDepressed				UI/menu_open.wav
+		MenuHeaderButton.SoundDepressed				"ui/sfx/click_05.wav"
 
 		MenuHeaderButton.AlignPadding				32 // Padding used between top-right buttons
 
 		// main menu buttons (training/compete/multiplayer/coop)
-		MainMenuButton.TextColor					DoiMainMenuWhite
+		MainMenuButton.TextColor					DoiMainMenuWhiteDisabled
 		MainMenuButton.TextColor_Armed				DoiMainMenuWhite
 		MainMenuButton.TextColor_Pressed			DoiMainMenuWhite
 		MainMenuButton.TextColor_Disabled			DoiMainMenuWhiteDisabled
@@ -523,7 +531,7 @@ Scheme
 		MainMenuButton.TextAlignment				west
 		MainMenuButton.AllCaps						1
 		MainMenuButton.SoundArmed					UI/menu_focus.wav
-		MainMenuButton.SoundDepressed				UI/menu_open.wav
+		MainMenuButton.SoundDepressed				"ui/sfx/click_05.wav"
 		MainMenuButton.AlignPadding					38 // Padding between buttons
 
 		// in-game main menu buttons

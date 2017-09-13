@@ -119,29 +119,45 @@
 		"Rank_Commonwealth_Private"				"Private"
 		"Rank_Wehrmacht_Soldat"					"Soldat"
 		// 1
-		"Rank_American_Private"					"Private"
+		"Rank_American_PFC"						"Private First Class"
 		"Rank_Commonwealth_LanceCorporal"		"Lance Corporal"
 		"Rank_Wehrmacht_Obersoldat"				"Obersoldat"
 		// 2
-		"Rank_American_PFC"						"Private First Class"
+		"Rank_American_Corporal"				"Corporal"
 		"Rank_Commonwealth_Corporal"			"Corporal"
 		"Rank_Wehrmacht_Gefreiter"				"Gefreiter"
 		// 3
-		"Rank_American_Corporal"				"Corporal"
+		"Rank_American_Sergeant"				"Sergeant"
 		"Rank_Commonwealth_Sergeant"			"Sergeant"
 		"Rank_Wehrmacht_Obergefreiter"			"Obergefreiter"		
 		// 4
-		"Rank_American_Sergeant"				"Sergeant"
+		"Rank_American_StaffSergeant"			"Staff Sergeant"
 		"Rank_Commonwealth_ColourSergeant"		"Colour Sergeant"
 		"Rank_Wehrmacht_Unteroffizier"			"Unteroffizier"
 		// 5
-		"Rank_American_StaffSergeant"				"Staff Sergeant"
+		"Rank_American_TechnicalSergeant"			"Technical Sergeant"
 		"Rank_Commonwealth_CompanySergeantMajor"	"Company Sergeant Major"
 		"Rank_Wehrmacht_Feldwebel"					"Feldwebel"
 		// 6
-		"Rank_American_MasterSergeant"				"Master Sergeant"
+		"Rank_American_FirstSergeant"				"First Sergeant"
 		"Rank_Commonwealth_RegimentalSergeantMajor"	"Regimental Sergeant Major"
 		"Rank_Wehrmacht_Oberfeldwebel"				"Oberfeldwebel"
+		// 7
+		"Rank_American_Lieutenant"					"Lieutenant"
+		"Rank_Commonwealth_Lieutenant"				"Lieutenant"
+		"Rank_Wehrmacht_Oberleutnant"				"Oberleutnant"
+		// 8
+		"Rank_American_Captain"						"Captain"
+		"Rank_Commonwealth_Captain"					"Captain"
+		"Rank_Wehrmacht_Hauptmann"					"Hauptmann"
+		// 9
+		"Rank_American_Major"						"Major"
+		"Rank_Commonwealth_Major"					"Major"
+		"Rank_Wehrmacht_Major"						"Major"
+		// 10
+		"Rank_American_Colonel"						"Colonel"
+		"Rank_Commonwealth_Colonel"					"Colonel"
+		"Rank_Wehrmacht_Oberst"						"Oberst"
 		
 		// Units		
 		"unit_default"								"Domyślna jednostka"		
@@ -1069,13 +1085,13 @@
 		"Tagline_WellRounded"					"Wyrównany"
 		"Tagline_WellRounded_Desc"				"Uzyskał wynik przynajmniej 10 zabić, posiadając współczynnik zabić/śmierci powyżej 3:2 i otrzymując przynajmniej 5 punktów za wykonywanie celów misji."
 		"Tagline_LastStandKillsTier1"			"Twardy orzech"
-		"Tagline_LastStandKillsTier1_Desc"		"Zabito przynajmniej 5 przeciwników podczas ostatniej szansy jako obrońca."
+		"Tagline_LastStandKillsTier1_Desc"		"Zabił przynajmniej 5 przeciwników podczas ostatniej szansy (jako obrońca)."
 		"Tagline_LastStandKillsTier2"			"Twardziel"
-		"Tagline_LastStandKillsTier2_Desc"		"Zabito przynajmniej 10 przeciwników podczas ostatniej szansy jako obrońca."		
+		"Tagline_LastStandKillsTier2_Desc"		"Zabił przynajmniej 5 przeciwników podczas ostatniej szansy (jako obrońca)."		
 		"Tagline_LastStandKillsTier3"			"Twardy drań"
-		"Tagline_LastStandKillsTier3_Desc"		"Zabito przynajmniej 15 przeciwników podczas ostatniej szansy jako obrońca."
+		"Tagline_LastStandKillsTier3_Desc"		"Zabił przynajmniej 5 przeciwników podczas ostatniej szansy (jako obrońca)."
 		"Tagline_TenaciousD"					"Tenacious D"
-		"Tagline_TenaciousD_Desc"				"Przetrwano co najmniej 10 fal jako obrońca."
+		"Tagline_TenaciousD_Desc"				"Przetrwał co najmniej 10 fal jako obrońca."
 		
 		// Voting
 		"IngameUI_Endgame_CurrentScenario"				"Inne opcje"
@@ -1418,7 +1434,7 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_LoadingHint_Coop_Stronghold"			"W trybie Twierdza masz tylko chwilę na posunięcie się naprzód przed przybyciem wrogich posiłków. Zawsze bądź w ofensywie."
 		"GameUI_LoadingHint_Coop_Entrenchment"			"W trybie obrony umocnień twoja drużyna ma głęboką linie obrony. Wycofaj się i przegrupuj jeżeli sytuacja wygląda kiepsko."
 		"GameUI_LoadingHint_Coop_MachineGunner"			"Wrogowie rozstawieni z karabinami maszynowymi wycelują w każdego widocznego dłużej niż sekundę. Bądź bardzo ostrożny nacierając na fortyfikacje."
-		"GameUI_LoadingHint_Coop_Commander"				"Jeśli jesteś oficerem, komenda "Potrzebuję wsparcia" doda pobliskich sojuszników do twojego oddziału, który podąży za tobą. Można im wydawać rozkazy za pomocą menu promienistego."
+		"GameUI_LoadingHint_Coop_Commander"				"Jeśli jesteś oficerem, komenda \"Potrzebuję wsparcia\" doda pobliskich sojuszników do twojego oddziału, który podąży za tobą. Można im wydawać rozkazy za pomocą menu promienistego."
 		"GameUI_LoadingHint_Coop_CornerCheck"			"Wrogowie będą sprawdzać rogi wchodząc do pomieszczeń. Nie myśl że kampiąc tam jesteś bezpieczny!"
 		"GameUI_LoadingHint_Coop_Capture"				"Wrogowie będą przeszukiwać punkty kontrole kiedy są przejmowane. Przygotuj się na to podczas przejmowania."
 		"GameUI_LoadingHint_Coop_Bayonet"				"Strzeż się bagnetu!"

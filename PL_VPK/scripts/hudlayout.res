@@ -1204,4 +1204,52 @@
 		"FontSupply"			"HudHeaderMedium"
 		"SupplyCountColor"		"10 15 10 240"
 	}
+
+	"CHudMapBriefing"
+	{
+		"fieldName"							"CHudMapBriefing"
+		"xpos"								"30%"			
+		"ypos"								"c-11"
+		"wide"								"400"		
+		"tall"								"40"
+		"visible"							"1"
+		"enabled"							"1"
+		"paintbackground"					"0"
+		
+		"alpha"								"0"
+		
+		"MapTitle"
+		{
+			"fieldName"			"MapTitle"
+			"ControlName"		"Label"
+			"xpos"				"0"
+			"ypos"				"0"
+			"wide"				"200"
+			"tall"				"25"
+			"visible"			"1"
+			"enabled"			"1"
+			"paintbackground"	"0"
+			"font"				"HudDescriptiveVariableWidthLarge"
+			"textAlignment"		"west"
+			"allcaps"			"0"
+			"shadow"			"1"
+		}
+		
+		"MapDescription"
+		{
+			"fieldName"			"MapDescription"
+			"ControlName"		"Label"
+			"xpos"				"0"
+			"ypos"				"20"
+			"wide"				"200"
+			"tall"				"25"
+			"visible"			"1"
+			"enabled"			"1"
+			"paintbackground"	"0"
+			"font"				"HudDescriptiveVariableWidthLarge"
+			"textAlignment"		"west"
+			"allcaps"			"0"
+			"shadow"			"1"
+		}
+	}
 }

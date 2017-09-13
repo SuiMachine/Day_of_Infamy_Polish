@@ -41,7 +41,7 @@
 			"textAlignment"		"west"
 			"dulltext"			"0"
 			"brighttext"		"0"
-			"font"				"HudHeaderExtraLarge"
+			"font"				"HudHeaderExtraLargeHeadline"
 			"wrap"				"1"
 			"fgcolor_override"	"242 235 216 255"
 			proportionalToParent	1
