@@ -179,7 +179,7 @@
 		"GameUI_AudioOptions_Volume"			"Głośność ogólna"
 		"GameUI_AudioOptions_MusicVolume"		"Głośność muzyki"
 		"GameUI_AudioOptions_VoiceVolume"		"Głośność mikrofonu"
-		"GameUI_SoundQuality"					"Jakość dzwięku"
+		"GameUI_SoundQuality"					"Jakość dźwięku"
 		"GameUI_SpeakerConfiguration"			"Konfiguracja głośników"
 		"GameUI_Headphones"						"Słuchawki"
 		"GameUI_2Speakers"						"2 głośniki"
@@ -197,6 +197,9 @@
 		"GameUI_OpenMic"						"Nadawanie ciągłe"
 		"GameUI_SetupMicrophone"				"USTAWIENIA MIKROFONU"
 		"GameUI_VoiceRadioFilter"				"Voice Radio Filter"
+		
+		"GameUI_ApplyDiscardTitle"				"Niezapisane zmiany"
+		"GameUI_ApplyDiscardMessage"			"Czy chciałbyś zastosować zmiany?"
 
 		// Controls	
 		"GameUI_Controls"						"Sterowanie"

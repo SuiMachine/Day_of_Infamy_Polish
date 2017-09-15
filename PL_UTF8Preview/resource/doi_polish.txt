@@ -1112,6 +1112,7 @@
 		"GameUI_Mods"							"Modyfikacje"
 		"GameUI_Options"						"Opcje"
 		"GameUI_Help"							"Pomoc"
+		"GameUI_ShootingRange"					"Strzelnica"
 		"GameUI_PlayMultiplayer"				"Wielu Graczy"
 		"GameUI_PlayCoop"						"Kooperacja"	
 		"GameUI_PlayPractice"					"Trening"	
@@ -1121,6 +1122,7 @@
 		"GameUI_News"							"Newsy"
 		"GameUI_ReadMore"						"Czytaj Więcej"
 		// Hover descriptions
+		"GameUI_MainMenu_DescriptionShootingRange"	"Rozpłaszcz się i odpręż na strzelnicy, wystrzeliwując klika magazynków do tarczy."
 		"GameUI_MainMenu_DescriptionMultiplayer"	"Zagraj w sieci z lub przeciwko innym graczom."
 		"GameUI_MainMenu_DescriptionCooperative"	"Zagraj scenariusz sieciowy współpracując z innymi graczami przeciwko wrogom kontrolowanym przez sztuczną inteligencję."
 		"GameUI_MainMenu_DescriptionTutorials"		"Przeglądaj nagrania instruktażowe, by poznać podstawowy gry."
