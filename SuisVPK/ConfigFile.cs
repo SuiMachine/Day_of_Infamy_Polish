@@ -21,7 +21,10 @@ namespace SuisVPK
         public bool useUTF8Copy { get; set; }
         public string utf8CopyLocation { get; set; }
 
-        public ConfigFile()
+		public bool alwaysCompileCaptions { get; set; }
+
+
+		public ConfigFile()
         {
             if (File.Exists(settingsFile))
                 loadSettings();
@@ -74,7 +77,11 @@ namespace SuisVPK
                     line = line.Split(new char[] { ':' }, 2)[1];
                     utf8CopyLocation = line;
                 }
-            }
+				else if (line.StartsWith("AlwaysCompileCaptions:"))
+				{
+					alwaysCompileCaptions = parseBool(line.Split(new char[] { ':' }, 2)[1], false);
+				}
+			}
             SR.Close();
             SR.Dispose();
         }
@@ -92,14 +99,15 @@ namespace SuisVPK
 
         public void saveSettings()
         {
-            File.WriteAllText(settingsFile, "WorkDir:" + workDirectory
-                + "\nVPKDir:" + vpk_location
-                + "\nModDir:" + modDir
-                + "\nOriginalLocalizationLocation:" + originalLocalizationLocation
-                + "\nPostfix:" + postFix
-                + "\nProcessName:" + processName
-                + "\n\nUseUTF8Copy:" + useUTF8Copy.ToString()
-                + "\nUTF8CopyLocation:" + utf8CopyLocation
+			File.WriteAllText(settingsFile, "WorkDir:" + workDirectory
+				+ "\nVPKDir:" + vpk_location
+				+ "\nModDir:" + modDir
+				+ "\nOriginalLocalizationLocation:" + originalLocalizationLocation
+				+ "\nPostfix:" + postFix
+				+ "\nProcessName:" + processName
+				+ "\n\nUseUTF8Copy:" + useUTF8Copy.ToString()
+				+ "\nAlwaysCompileCaptions:" + alwaysCompileCaptions.ToString()
+				+ "\nUTF8CopyLocation:" + utf8CopyLocation
                 );
         }
         #endregion

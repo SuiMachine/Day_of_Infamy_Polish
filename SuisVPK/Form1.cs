@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace SuisVPK
 {
     public partial class Form1 : Form
     {
-        Timer timerCheck = new Timer();
+		Timer timerCheck = new Timer();
         Dictionary<string, DateTime> fileDictionary = new Dictionary<string, DateTime>();
         ContextMenu contexTooltipMenu = new ContextMenu();
         public ConfigFile configFileRef = new ConfigFile();
 
         const string vpk_exe = "vpk.exe";
-        const string vpk_args = "";
+		const string cc_compiler = "captioncompiler.exe";
+
+		const string vpk_args = "";
 
         public Form1()
         {
@@ -31,7 +34,7 @@ namespace SuisVPK
             contexTooltipMenu.MenuItems.Add("Update file list and VPK");
             contexTooltipMenu.MenuItems.Add("Cancel");
             contexTooltipMenu.MenuItems.Add("Exit");
-        }
+		}
 
         #region FormEvents
         #region SetButtons
@@ -85,9 +88,14 @@ namespace SuisVPK
             configFileRef.useUTF8Copy = CB_UTF8Enabled.Checked;
             TB_UTF8CopyLocation.Enabled = configFileRef.useUTF8Copy;
         }
-        #endregion
-        #region OtherButtons
-        private void B_Watch_Click(object sender, EventArgs e)
+
+		private void CB_AlwaysCompileCaptions_CheckedChanged(object sender, EventArgs e)
+		{
+			configFileRef.alwaysCompileCaptions = CB_AlwaysCompileCaptions.Checked;
+		}
+		#endregion
+		#region OtherButtons
+		private void B_Watch_Click(object sender, EventArgs e)
         {
 
             if (configFileRef.vpk_location != "" && Directory.Exists(configFileRef.vpk_location) && configFileRef.workDirectory != "" && Directory.Exists(configFileRef.workDirectory))
@@ -157,7 +165,8 @@ namespace SuisVPK
                 minizedIcon.Visible = false;
                 minizedIcon.Dispose();
             }
-        }
+			configFileRef.saveSettings();
+		}
         #endregion
         #endregion
 
@@ -190,8 +199,12 @@ namespace SuisVPK
             fileDictionary.Clear();
             foreach (string file in files)
             {
-                FileInfo f = new FileInfo(file);
-                fileDictionary.Add(file, f.LastWriteTimeUtc);
+				//We don't care about compiled caption files - they will be taken care during VPK build
+				if(!file.EndsWith(".dat"))
+				{
+					FileInfo f = new FileInfo(file);
+					fileDictionary.Add(file, f.LastWriteTimeUtc);
+				}
             }
         }
 
@@ -216,6 +229,8 @@ namespace SuisVPK
             if(configFileRef.useUTF8Copy)
                 rebuildUTF8PreviewFiles();
 
+			checkAndCompileCaptionFiles();
+
 
             Process proc = new Process();
             proc.StartInfo.WorkingDirectory = configFileRef.vpk_location;
@@ -235,10 +250,47 @@ namespace SuisVPK
             File.Copy(from, to);
         }
 
-        /// <summary>
-        /// Builds a list of files from a translation directory, reads them and saves them as UTF-8 in seperate directory
-        /// </summary>
-        private void rebuildUTF8PreviewFiles()
+		private void checkAndCompileCaptionFiles()
+		{
+			foreach (var fileInf in fileDictionary)
+			{
+				string fileName = Path.GetFileName(fileInf.Key);
+				if(fileName.EndsWith(".txt") &&					
+					(fileName.StartsWith("subtitles_") || fileName.StartsWith("closecaption_")))
+				{
+					FileInfo f = new FileInfo(fileInf.Key);
+					if(f.LastWriteTimeUtc != fileInf.Value || configFileRef.alwaysCompileCaptions)
+					{
+						string gameDestination = Path.Combine(Directory.GetParent(configFileRef.vpk_location).ToString(), "doi", "resource");
+						string resultFileName = Path.GetFileNameWithoutExtension(fileName) + ".dat";
+
+						File.Copy(fileInf.Key, Path.Combine(gameDestination, fileName), true);
+						Process proc = new Process();
+						proc.StartInfo.WorkingDirectory = Path.Combine(Directory.GetParent(configFileRef.vpk_location).ToString(), "doi");
+						proc.StartInfo.FileName = Path.Combine(configFileRef.vpk_location, cc_compiler);
+						proc.StartInfo.Arguments = fileName;
+						proc.StartInfo.UseShellExecute = false;
+						proc.EnableRaisingEvents = true;
+						proc.Start();
+						proc.WaitForExit();
+
+
+
+						if (File.Exists(Path.Combine(gameDestination, resultFileName)))
+						{
+							if (File.Exists(Path.Combine(configFileRef.workDirectory, "resource", resultFileName)))
+								File.Delete(Path.Combine(configFileRef.workDirectory, "resource", resultFileName));
+							File.Move(Path.Combine(gameDestination, resultFileName), Path.Combine(configFileRef.workDirectory, "resource", resultFileName));
+						}
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// Builds a list of files from a translation directory, reads them and saves them as UTF-8 in seperate directory
+		/// </summary>
+		private void rebuildUTF8PreviewFiles()
         {
             //Pretty much a copy of the other thing, except this one works with local variables related to utf8 copy directory
             string[] Directories = Directory.GetDirectories(configFileRef.utf8CopyLocation, "*", SearchOption.AllDirectories);
@@ -356,7 +408,8 @@ namespace SuisVPK
             CB_UTF8Enabled.Checked = configFileRef.useUTF8Copy;
             TB_UTF8CopyLocation.Enabled = configFileRef.useUTF8Copy;
             TB_UTF8CopyLocation.Text = configFileRef.utf8CopyLocation;
+			CB_AlwaysCompileCaptions.Checked = configFileRef.alwaysCompileCaptions;
 
         }
-    }
+	}
 }
