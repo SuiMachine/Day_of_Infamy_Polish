@@ -1,0 +1,15 @@
+﻿﻿"lang"
+{
+"Language" "Polish"
+"Tokens"
+{
+"chat_filterbutton"	"Filtry"
+"filter_joinleave"	"Dołącza/Opuszcza"
+"filter_namechange"	"Zmiany nazw"
+"filter_publicchat"	"Publiczny Czat"
+"filter_servermsg"	"Wiadomości z serwera"
+"filter_teamchange"	"Zmiany drużyn"
+"chat_say"			"Powiedz :"
+"chat_say_team"	    "Powiedz (Drużyna) :"
+}
+}

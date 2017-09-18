@@ -292,7 +292,6 @@
 			this.Controls.Add(this.TB_DevToolsPath);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
-			this.MinimizeBox = false;
 			this.Name = "Form1";
 			this.Text = "SuicideMachine\'s VPK Helper";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
