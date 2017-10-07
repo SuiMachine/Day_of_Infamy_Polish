@@ -252,6 +252,7 @@ namespace SuisVPK
 
 		private void checkAndCompileCaptionFiles()
 		{
+			StringBuilder sb = new StringBuilder();
 			foreach (var fileInf in fileDictionary)
 			{
 				string fileName = Path.GetFileName(fileInf.Key);
@@ -271,8 +272,44 @@ namespace SuisVPK
 						proc.StartInfo.Arguments = fileName;
 						proc.StartInfo.UseShellExecute = false;
 						proc.EnableRaisingEvents = true;
+
+						proc.StartInfo.RedirectStandardError = true;
+						proc.StartInfo.RedirectStandardOutput = true;
+
+						proc.ErrorDataReceived += (sender, e) =>
+						{
+#if DEBUG
+							Debug.WriteLine(">ERROR RECEIVED: " + e.Data);
+#else
+							sb.AppendLine("> ERROR RECEIVED: " + e.Data);
+#endif
+						};
+						proc.OutputDataReceived += (sender, e) =>
+						{
+#if DEBUG
+							Debug.WriteLine(">COMPILATION OUTPUT: " + e.Data);
+#else
+							sb.AppendLine("> DATA RECEIVED: " + e.Data);
+#endif
+						};
+#if DEBUG
+						Debug.WriteLine("==COMPILATION OUTPUT OPENING==");
+#else
+						sb.AppendLine("== COMPILATION OUTPUT OPENING ==");
+#endif
+
+
 						proc.Start();
+						proc.BeginOutputReadLine();
 						proc.WaitForExit();
+
+
+						proc.CancelOutputRead();
+#if DEBUG
+						Debug.WriteLine("==COMPILATION OUTPUT CLOSED==");
+#else
+						sb.AppendLine("==COMPILATION OUTPUT CLOSED==");
+#endif
 
 
 
@@ -285,6 +322,9 @@ namespace SuisVPK
 					}
 				}
 			}
+#if !(DEBUG)
+			MessageBox.Show(sb.ToString(), "Compilation output", MessageBoxButtons.OK, MessageBoxIcon.Information);
+#endif
 		}
 
 		/// <summary>
