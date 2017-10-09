@@ -1423,7 +1423,7 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_LoadingHint_Slide"				"Możesz wykonać wślizg wciskając klawisz kucania będąc w trakcie sprintu."
 		"GameUI_LoadingHint_Binoculars"			"Lornetka sprawuje się świetnie, gdy trzeba znaleźć ukrytych wrogów. Jako oficer możesz nacisnąć %+attack% by wezwać artylerię. Naciśnięcie %+attack% jako podrzędny, spowoduje wydanie komunikatu o zauważeniu wroga."
 		"GameUI_LoadingHint_Stuka"				"Sztukas zrzuca pojedynczą bombę, potrafiącą przebić się przez kilka warstw betonu. Użyj go aby pozbyć się ciężko okopanych wrogów"
-		"GameUI_LoadingHint_Strafe"				"Nalot w stosunku do pozostałego wsparcia ogniowego bardzo szybko dociera do celu. Wykorzystaj to jako do zaskoczenia wroga."
+		"GameUI_LoadingHint_Strafe"				"Nalot - w stosunku do pozostałego wsparcia ogniowego - bardzo szybko dociera do celu. Wykorzystaj to, by zaskoczyć przeciwnika."
 		"GameUI_LoadingHint_SupplyDrop"			"Zrzut zaopatrzenia uleczy każdego członka drużyny, który go użyje. Rozważ zrzut niedaleko linii frontu, aby utrzymać swoich sojuszników zdolnych do walki."
 		"GameUI_LoadingHint_Grenade"			"Granaty da się \"gotować\" poprzez przytrzymanie klawisza %+attack%. Przytrzymanie klawisza %+attack2% nie odpowiada jednak za \"gotowanie\" granatu."
 		"GameUI_LoadingHint_Typhoon"			"Hawker Typhoon wystrzeliwuje 8 rakiet na cel. Jest to dobra broń do przeprowadzenia precyzyjnego ataku."
