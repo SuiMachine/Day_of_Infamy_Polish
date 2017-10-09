@@ -792,7 +792,7 @@
 		"hq/english/announcement/objective_taken/taken_george1.ogg" "Hej, sztab dał nam znać, że zabezpieczyliśmy George!"
 		"hq/english/announcement/objective_taken/taken_george2.ogg" "Dostałem wieści, przejęliśmy George!"
 		"hq/english/announcement/objective_taking/taking_able1.ogg" "Wieści ze sztabu. Zabezpieczamy punkt Able!"
-		"hq/english/announcement/objective_taking/taking_able2.ogg" "Dowództwo donosi, że taking Able!"
+		"hq/english/announcement/objective_taking/taking_able2.ogg" "Dowództwo donosi, że przejmujemy Able!"
 		"hq/english/announcement/objective_taking/taking_baker1.ogg" "Dowództwo donosi, że zabezpieczamy Baker!"
 		"hq/english/announcement/objective_taking/taking_baker2.ogg" "Dostałem wieści, że mamy naszych w punkcie Baker - przejmujemy go!"
 		"hq/english/announcement/objective_taking/taking_charlie1.ogg" "Dostałem wieści z dowództwa - mamy naszych na Charlie!"
