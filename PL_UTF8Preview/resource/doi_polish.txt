@@ -39,6 +39,10 @@
 		"saint_lo_subtext"						"Francja, 1944"		
 		"foy"									"Foy"
 		"foy_subtext"							"Belgia, 1945"
+		"brittany"								"Bretania"
+		"brittany_subtext"						"Francja, 1944"	
+		"shooting_range"						"Strzelnica"
+		"shooting_range_subtext"				"Anglia, 1945"
 		
 		// Factions
 		"faction_german_army"					"Wehrmacht"
@@ -841,6 +845,7 @@
 		"GameUI_vote_changegamemode_entrenchment"	"Zmienić tryb gry na obronę umocnień?"
 		"GameUI_vote_changegamemode_patrol"			"Zmienić tryb gry na patrol?"
 		"GameUI_vote_changegamemode_raid"			"Zmienić tryb gry na rajd?"		
+		"GameUI_vote_changegamemode_sandbox"		"Zmienić tryb gry na sandbox?"
 		"GameUI_vote_passed_change_offensive"		"Zmienianie trybu gry na ofensywę"
 		"GameUI_vote_passed_change_invasion"		"Zmienianie trybu gry na inwazję"
 		"GameUI_vote_passed_change_frontline"		"Zmienianie trybu gry na linię frontu"
@@ -852,6 +857,7 @@
 		"GameUI_vote_passed_change_entrenchment"	"Zmienianie trybu gry na obronę umocnień"
 		"GameUI_vote_passed_change_patrol"			"Zmienianie trybu gry na patrol"
 		"GameUI_vote_passed_change_raid"			"Zmienianie trybu gry na rajd"
+		"GameUI_vote_passed_change_sandbox"			"Zmienianie trybu gry na sandbox"
 		"GameUI_vote_botdifficulty_doi_0"			"Łatwy poziom trudności"
 		"GameUI_vote_botdifficulty_doi_1"			"Normalny poziom trudności"
 		"GameUI_vote_botdifficulty_doi_2"			"Wysoki poziom trudności"
@@ -1118,6 +1124,8 @@
 		"GameUI_PlayPractice"					"Trening"	
 		"GameUI_Tutorials"						"Samouczek"	
 		"GameUI_ServerBrowser"					"Lista serwerów"
+		"GameUI_ItemStore"						"Kup jednostki"
+		
 		// News
 		"GameUI_News"							"Newsy"
 		"GameUI_ReadMore"						"Czytaj Więcej"
@@ -1161,7 +1169,8 @@
 		"radial_mark_enemy"						"Oznacz Wroga"
 		"KB_VoiceCommands"						"Komendy Głosowe"
 		"KB_OfficerCommands"					"Komendy Oficerskie"
-		"KB_FireSupportCommands"				"Komendy Wsparcia Ogniowego"	
+		"KB_FireSupportCommands"				"Komendy Wsparcia Ogniowego"
+		"KB_QuickSelect"						"Szybki wybór"	
 		// Video options	
 		"GameUI_VideoOptions_FlamethrowerLighting" "Oświetlenie miotacza płomieni"		
 		"GameUI_VideoOptions_SuperBloom"		"Barwy atmosferyczne"
@@ -1380,6 +1389,11 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następujące sposoby:
 - 1 punkt za wykonanie zadania
 - 1 punkt za każde 5 zabić lub asyst"	
+
+		// Sandbox
+		"game_gm_sandbox"							"Sandbox"
+		"game_objective_sandbox"					"Baw się i rozrabiaj do woli!"
+		"game_description_sandbox"					"Baw się i rozrabiaj do woli!"	
 		
 		// Loading Screen	
 		// Headers	
@@ -1404,7 +1418,7 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_LoadingHint_SniperAdvice"		"Kiedy grasz snajperem, upewnij się że chronisz lub atakujesz cele. Nie trzymaj się z tyłu. Wspieraj swoją drużynę."
 		"GameUI_LoadingHint_CaptureObjectives"	"Graj agresywnie. Przejmowane cele wygrywają wojnę i dają Twojej drużynie więcej fal posiłków."
 		"GameUI_LoadingHint_OfficerObligation"	"Bycie oficerem to odpowiedzialne zadanie. Prowadź swoją drużynę, trzymaj radiooperatora blisko i używaj wsparcia ogniowego strategicznie."
-		"GameUI_LoadingHint_HighLethality"		"Nie ma opancerzenia, więc każde trafienie rani. Bądź ostrożny."
+		"GameUI_LoadingHint_HighLethality"		"Nie jesteś opancerzany, więc każde trafienie poważnie rani. Bądź ostrożny."
 		"GameUI_LoadingHint_SmokeGrenades"		"Pamiętaj o granatach dymnych! Są bardzo skuteczne przy zabezpieczaniu pozycji przeciwnika."
 		"GameUI_LoadingHint_StickTogether"		"Trzymajcie się razem! Twoi sojusznicy pomogą utrzymać Cię przy życiu i wygrać walkę."
 		"GameUI_LoadingHint_FWStrength"			"Miotacz ognia jest niezwykle skuteczny w starciach na bliskie odległości ale pamiętaj żeby nie zranić nim siebie ani swoich kolegów z drużyny."
@@ -1464,6 +1478,35 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_CustomContent_Tag_CustomUI"				"Niestandardowy Interfejs"
 		"GameUI_CustomContent_Tag_TotalConversion"		"Całkowita Konwersja"
 		"GameUI_CustomContent_Tag_Playlist"				"Lista map"
-		"GameUI_CustomContent_Tag_Misc"					"Różne"		
+		"GameUI_CustomContent_Tag_Misc"					"Różne"
+
+		// Hints
+		"Hint_ShootingRange_Welcome_Title"					"Witaj na strzelnicy"
+		"Hint_ShootingRange_BoltAction_Title"				"Karabiny czterotaktowe"
+		"Hint_ShootingRange_ExplosiveRocket_Title"			"Granatniki i wyrzutnie rakiet"
+		"Hint_ShootingRange_ExplosivePlantable_Title"		"Ładunki wybuchowe"
+		"Hint_ShootingRange_ExplosiveThrowable_Title"		"Granaty i ładunki miotane"
+		"Hint_ShootingRange_SMGLMG_Title"					"Pistolety maszynowe i LKMy"
+		"Hint_ShootingRange_MachineGun_Title"				"Karabiny maszynowe"
+		"Hint_ShootingRange_Flamethrower_Title"				"Miotacze ognia"
+		"Hint_ShootingRange_ResetTargets_Title"				"Restartowanie strzelnicy"
+		
+		"Hint_ShootingRange_Welcome_Description"			"Tutejsza strzelnica została stworzona dla osób, które chciały zapoznać się z systemem poruszania oraz mechaniką strzelania w grze. Jest także miejscem, gdzie możesz się zrelaksować i rozładować nerwy.\nZnajdziesz tu różnego rodzaju bronie, od pistoletów i karabinów z zamkiem czterotaktowym, aż po niszczycielskie bazooki i wiązki TNT."
+		
+		"Hint_ShootingRange_BoltAction_Description"			"Ta strzelnica poświęcona jest karabinom z zamkiem czterotaktowym. Przyjdzie Ci dość często z nich korzystać.\nKarabiny te przeznaczone są głównie do walki na średnią i długą odległość. Były popularne podczas Drugiej Wojny Światowej.\n\nBy wystrzelić jeden nabój naciśnij klawisz %+attack%. Jeśli przytrzymasz klawisz %+attack%, opóźnisz ładowanie kolejnego naboju do komory - możesz to wykorzystać, jeśli chcesz potwierdzić trafienie.\n\nNaciskając %+toggle_zoom% możesz wycelować korzystając z przyrządów celowniczych. Jeśli naciśniesz przycisk %+sprint% podczas celowania, wstrzymasz swój oddech, dodatkowo stabilizując przez to broń.\n\nNaciskając %+special1%, możesz wykonać atak kolbą broni. Doczepiając do broni bagnet, możesz wykorzystać ten sam klawisz, by wykonać szarżę na wroga i wbić w niego ostrze zaczepione na broni."
+		
+		"Hint_ShootingRange_ExplosiveRocket_Description"	"Granatniki i wyrzutnie rakiet są świetnym sposobem, by z odległości zrujnować komuś dzień. Stosuje się je stosunkowo łatwo i są one skuteczne w wielu sytuacjach.\n\nNaciskając i lub przytrzymując klawisz %+toggle_zoom% możesz wycelować stosując przyrządy celownicze broni. Dodatkowo przytrzymując %+sprint%, możesz też zredukować kołysanie broni. Naciskając %+attack% odpalasz ładunek.\n\nNiektóre bronie są tylko pojedynczego użytku, przez co będziesz musiał pobrać dodatkową amunicję, korzystając ze skrzynki z amunicją lub wycofując się do strefy zaopatrzenia."
+		
+		"Hint_ShootingRange_ExplosivePlantable_Description"	"Ładunki wybuchowe mogą być wykorzystywane do szybkiego \"czyszczenia pomieszczeń\" oraz niszczenia różnego rodzaju obiektów, jak: ściany, pompy paliwowe, działa przeciwlotnicze, a czasami nawet drzwi.\nPo podłożeniu, ładunków nie da się rozbroić, więc upewnij się, że Twoi kompani opuścili obszar eksplozji, zanim zdecydujesz się je podłożyć lub je rzucić. Po zapaleniu lontu, będziesz miał 10 sekund, by opuścić niebezpieczny obszar i znaleźć ochronę.\n\nAby podłożyć ładunek, najpierw znajdź płaską powierzchnie, do której może on być przyczepiony.\n\nMożesz również rzucić ładunek, wykorzystując klawisz %+attack%. Pamiętaj jednak, że ładunki wybuchowe sporo ważą, więc nie da się ich stosować na taką dużą odległość, na jaką stosuje się granaty.\n\nNaciskając klawisz %+toggle_zoom% możesz podłożyć ładunki. Gdy usłyszysz syk lontu - wynoś się jak daleko tylko możesz."
+		
+		"Hint_ShootingRange_ExplosiveThrowable_Description"	"Istnieją głównie dwa typy granatów miotanych oraz cała gama sposób na ich zastosowanie.\n\nGranaty \"gotowane\" można \"gotować\", wyciągając z nich zawleczkę i odliczając czas przed eksplozją.\nGranaty \"uderzeniowe\" wybuchają natomiast, przy uderzeniu w najbliższą powierzchnię.\n\nTrzymając klawisz %+attack% możesz wyciągnąć zawleczkę granatu. Zazwyczaj będziesz miał ok. 4-5 sekund, aby wycelować, zanim granat eksploduje. Puszczając klawisz %+attack% rzucisz granat w kierunku w którym patrzysz. Trzymając klawisz %+toggle_zoom%, możesz też wycelować granat, bez uzbrajania go lub wyciągania zawleczki.  Puszczając klawisz %+toggle_zoom% wyciągniesz zawleczkę i rzucisz granat w stronę, w którą patrzysz.\n\nW końcu, możesz też podrzucić granat naciskając klawisz %+special1%."
+		
+		"Hint_ShootingRange_SMGLMG_Description"				"Pistolety maszynowe i lekkie karabiny maszynowe są użyteczne podczas walki na bliski dystans i wykorzystuje się je, w celu szybkiego przejęcia obszaru.\n\nNaciskając %+attack% możesz strzelać z biodra. By wycelować przez przyrządy celownicze, naciśnij klawisz %+toggle_zoom%.\n\nNiektóre pistolety maszynowe i lekkie karabiny maszynowe posiadają więcej niż jeden tryb strzelania. Można go przełączyć poprzez naciśnięcie klawisza %+firemode%."
+		
+		"Hint_ShootingRange_MachineGun_Description"			"Są to Twoi najlepsi przyjaciele, gdy musisz utrzymać linię frontu. Karabiny maszynowe wymagają rozstawienia oraz współpracy z członkami zespołu, by utrzymać strzelca żywego i zaopatrzonego w amunicję.\n\nChoć możliwe jest strzelanie nimi z biodra, poprzez naciśnięcie klawisza %+attack%, zazwyczaj się tego odradza, ze względu na spory odrzut spowodowany strzałem.\n\nOdrzut można znacząco zredukować poprzez rozstawienie broni na płaskiej powierzchni gdy leżysz lub klęczysz na podłodze.\n\nGdy broń osadzona jest na dwójnogu, możesz również wykorzystać jej przyrządy celownicze, naciskając klawisz %+toggle_zoom%."
+		
+		"Hint_ShootingRange_Flamethrower_Description"		"Te paskustwa dają wrogą przedsmak piekła, które ich czeka. Miotacze ognia sprawują się doskonale niemal w każdej robocie, o ile tylko stosowane są na bliski dystans. Efektywność miotacza, spada niemalże do zera, gdy Twój cel znajduje się poza zasięgiem rażenia."
+		
+		"Hint_ShootingRange_ResetTargets_Description"		"Naciśnij klawisz %+use%, celując na tarczę na stole, by zrestartować położenie celów na strzelnicy."
 	}
 }

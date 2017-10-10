@@ -67,7 +67,7 @@
 		"GameUI_MsgBx_LoginRequired"			"Wymagane zalogowanie do Steam"
 		"GameUI_MsgBx_SteamRequired"			"Wymagany Steam"		
 		"SessionError_Kicked"							"Wyrzucony z serwera."
-		"SessionError_NoPartner"						"Brak pratnera"
+		"SessionError_NoPartner"						"Brak partnera"
 		"SessionError_ConnectionFailedAfter"			"Błąd połączenia po wielokrotnych próbach łączenia."
 		"SessionError_ServerShuttingDown"				"Serwer wyłączony."
 
@@ -321,15 +321,15 @@
 		"GameUI_vote_no_pc_instruction"				"Wciśnij F2 na NIE"
 		"GameUI_vote_current_vote_count"			"Liczba głosów:"
 
-		"GameUI_vote_failed_nextlevel_round_delay"	"Nie można zmienic poziomu przez kolejną(e) %s1 rundę(y)"
-		"GameUI_vote_failed_vote_spam"				"Nie możesz ponownie głosowac przez %s1 sekund."
-		"GameUI_vote_failed_transition_vote"		"Nie mozna używać głosowania gdy inni gracze ciągle głosują."
+		"GameUI_vote_failed_nextlevel_round_delay"	"Nie można zmienić poziomu przez kolejną(e) %s1 rundę(y)"
+		"GameUI_vote_failed_vote_spam"				"Nie możesz ponownie głosować przez %s1 sekund."
+		"GameUI_vote_failed_transition_vote"		"Nie można używać głosowania gdy inni gracze ciągle głosują."
 		"GameUI_vote_failed_disabled_issue"			"Serwer ma wyłączone to zagadnienie."
 		"GameUI_vote_failed_map_not_found"			"Tej mapy nie ma."
 		"GameUI_vote_failed_map_not_valid"			"Nie znaleziono mapy w mapcyklu."
-		"GameUI_vote_failed_map_name_required"		"Musisz podac nazwę mapy."
-		"GameUI_vote_failed_recently"				"Głosowanie nieudane i niedostepne przez %s1 sekund(ę)."
-		"GameUI_vote_failed_team_cant_call"			"Twoja druzyna nie może brać udziału w głosowaniu."
+		"GameUI_vote_failed_map_name_required"		"Musisz podać nazwę mapy."
+		"GameUI_vote_failed_recently"				"Głosowanie nieudane i niedostępne przez %s1 sekund(ę)."
+		"GameUI_vote_failed_team_cant_call"			"Twoja drużyna nie może brać udziału w głosowaniu."
 		"GameUI_vote_failed_waitingforplayers"		"Głosowanie niedozwolone podczas oczekiwania na graczy."
 		"GameUI_vote_failed_cannot_kick_admin"		"Nie możesz głosować za wyrzuceniem Admina z serwera."
 		"GameUI_vote_failed_scramble_in_prog"		"Mieszanie członków drużyn w trakcie."
@@ -337,7 +337,7 @@
 		"GameUI_vote_failed_spectator"				"Serwer ma wyłączone głosowanie dla widzów."
 		"GameUI_vote_failed_nextlevel_set"			"Następna mapa została już wybrana."
 		"GameUI_vote_failed_cannot_kick_for_time"	"Wyrzucenie niedozwolone jeszcze przez %s1 sekund."
-		"GameUI_vote_failed_round_active"			"Nie mozna wyrzucić podczas trwania rundy."
+		"GameUI_vote_failed_round_active"			"Nie można wyrzucić podczas trwania rundy."
 
 		"GameUI_vote_kick_intent"					"%s1 chce wyrzucić %s2 %s3."
 		"GameUI_vote_mute_intent"					"%s1 chce wyciszyć %s2 %s3."
@@ -360,7 +360,7 @@
 		"GameUI_VoteKickReason_Cheating"			"Gracz oszukuje"
 		
 
-		"GameUI_vote_restart_game"					"Zrestartowac grę?"
+		"GameUI_vote_restart_game"					"Zrestartować grę?"
 		"GameUI_vote_passed_restart_game"			"Restartowanie gry..."
 		"GameUI_vote_restart_round"					"Zrestartować rundę?"
 		"GameUI_vote_passed_restart_round"			"Restartowanie rundy..."
@@ -371,7 +371,7 @@
 		"GameUI_vote_passed_changelevel_wait"		"Zmiana mapy na %s1 po tej rundzie."
 		"GameUI_vote_passed_nextlevel"				"Następna mapa ustawiona na %s1..."
 		"GameUI_vote_passed_nextlevel_extend"		"Przedłużenie rozgrywki"
-		"GameUI_vote_nextlevel_choices"				"Głosowanie na nastepną mapę!"
+		"GameUI_vote_nextlevel_choices"				"Głosowanie na następna mapę!"
 		"GameUI_vote_changechallenge"				"Zmienić aktualną misję na %s1?"
 		"GameUI_vote_passed_changechallenge"		"Zmiana misji na %s1"
 		"GameUI_vote_no_challenges"					"Misje nie są dostępne"
@@ -419,7 +419,7 @@
 		"GameUI_Chat_Prompt"					"Rozmawiaj:"
 		"GameUI_Chat_PlayerJoined"				"%s1 dołącza do lobby."
 		"GameUI_Chat_PlayerLeft"				"%s1 opuszcza lobby."
-		"GameUI_Chat_PlayerNowLeader"			"%s1 został dowodcą lobby."
+		"GameUI_Chat_PlayerNowLeader"			"%s1 został dowódca lobby."
 		"GameUI_Chat_YouNowLeader"				"Ty teraz dowodzisz oddziałem."
 		"GameUI_Chat_Access_Changed_Public"		"Lobby zmieniło status na: publiczne"
 		"GameUI_Chat_Access_Changed_Friends"	"Lobby zmieniło status na: tylko dla znajomych"
@@ -464,21 +464,21 @@
 
 		
 		//Lobby Statuses	
-		"steam_player_blocked_you"				"Jeden lub więcej graczy w tej grze ma Cię zablokowanego, co uniemożliwa dołączenie do lobby."
+		"steam_player_blocked_you"				"Jeden lub więcej graczy w tej grze ma Cię zablokowanego, co uniemożliwia dołączenie do lobby."
 		"steam_player_you_blocked"				"Masz zablokowanego jeden lub więcej graczy w tej grze, co uniemożliwia dołączenie z lobby."
 		"SessionError"							"BŁĄD LOBBY"
 		"SessionError_Unknown"					"Błąd połączenia z lobby, spróbuj ponownie za chwilę."
 		"SessionError_NotAvailable"				"Lobby jest już niedostępne."
-		"SessionError_Create"					"Nieudana próba utworzenia lobby. Sprawdź swoje połaczenie i spróbuj ponownie."
-		"SessionError_Connect"					"Nieudane połaczenie z serwerem gry."
-		"SessionError_Full"						"Nieudane połaczenie z lobby, brak wolnych miejsc."
+		"SessionError_Create"					"Nieudana próba utworzenia lobby. Sprawdź swoje połączenie i spróbuj ponownie."
+		"SessionError_Connect"					"Nieudane połączenie z serwerem gry."
+		"SessionError_Full"						"Nieudane połączenie z lobby, brak wolnych miejsc."
 		"SessionError_Kicked"					"Zostałeś wyrzucony."
 		"SessionError_Migrate"					"Lider lobby opuścił grę."
 		"SessionError_Lock"						"Nieudane połączenie z grą, gra zablokowana."
-		"SessionError_SteamServersDisconnected"	"Nie mozna połączyć się z serwerami. Sprawdź swoje połaczenie i spróbuj ponownie."	
+		"SessionError_SteamServersDisconnected"	"Nie można połączyć się z serwerami. Sprawdź swoje połączenie i spróbuj ponownie."	
 		
 		"PartyProgress_Creating"				"Tworzenie lobby..."
-		"PartyProgress_Joining"					"Dołaczanie do lobby..."
+		"PartyProgress_Joining"					"Dołączanie do lobby..."
 		
 		// Strings used by RejectConnection() in the engine
 		"Valve_Reject_Bad_Password"				"Niepoprawne hasło."
@@ -498,7 +498,8 @@
 		"Tooltip_LobbyConfigure"				"Konfiguruj Lobby"
 		"Tooltip_LobbyLeave"					"Opuść Lobby"
         "Tooltip_ToggleChat"                    "Przełącz Czat"		
-		
+		"Tooltip_Tour"                    		"Go to your Profile to start your next Tour!"	
+
 		// Playlists
 		"Playlist_Missing_Name"					"Nienazwana playlista"
 		"Playlist_Missing_Description"			""
