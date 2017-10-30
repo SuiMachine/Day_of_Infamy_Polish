@@ -937,10 +937,10 @@
 		"round_summary_header_game_tied"			"Żadna z armii nie osiągnęła zwycięstwa"
 		"round_summary_header_game_spectator"		"Bitwa zakończona"
 		// Win conditions
-		"WinCondition_Mp_Battle_Win"				"Drużyna %s1 wygrała bitwę"
-		"WinCondition_Mp_Battle_Loss"				"Drużyna %s1 przegrała bitwę"
-		"WinCondition_Mp_Mission_Win"				"Drużyna %s1 zakończyła misję powodzeniem"
-		"WinCondition_Mp_Mission_Loss"				"Drużyna %s1 zakończyła misję niepowodzeniem"
+		"WinCondition_Mp_Battle_Win"				"Drużyna \"%s1\" wygrała bitwę"
+		"WinCondition_Mp_Battle_Loss"				"Drużyna \"%s1\" przegrała bitwę"
+		"WinCondition_Mp_Mission_Win"				"Drużyna \"%s1\" zakończyła misję powodzeniem"
+		"WinCondition_Mp_Mission_Loss"				"Drużyna \"%s1\" zakończyła misję niepowodzeniem"
 		// Timers
 		"round_summary_timer_lastround"				"Głosowanie rozpocznie się za %s1"
 		"round_summary_timer_voting"				"Następny mecz rozpocznie się za %s1"
