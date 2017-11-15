@@ -2005,7 +2005,7 @@
 		"hq/support/german/carpetbombready3.ogg" "Samolot jest gotowy, jeśli byście potrzebowali bombardowania."
 		"hq/support/german/carpetbombready4.ogg" "Nalot bombowy w gotowości - dajcie nam znać."
 		"hq/support/german/carpetbombready5.ogg" "Mamy samolot w gotowości do przeprowadzenia nalotu bombowego."
-		"hq/support/german/genericsupportavaliable1.ogg" "Wsparcie jest dostępny. Oczekujemy na rozkazy, Gruppenführer."
+		"hq/support/german/genericsupportavaliable1.ogg" "Wsparcie jest dostępne. Oczekujemy na rozkazy, Gruppenführer."
 		"hq/support/german/genericsupportavaliable2.ogg" "Tutaj posterunek, możemy wam zapewnić wsparcie. Jesteśmy gotowi, Gruppenführer."
 		"hq/support/german/genericsupportavaliable3.ogg" "Posterunek jest gotowy, by was wesprzeć. Oczekujemy na rozkazy, Gruppenführer. Odbiór."
 		"hq/support/german/genericsupportavaliable4.ogg" "Tu posterunek. Jesteśmy gotowi. Dajcie nam znać, jak będziemy potrzebni."
