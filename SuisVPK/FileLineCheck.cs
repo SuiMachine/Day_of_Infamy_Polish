@@ -116,7 +116,7 @@ namespace SuisVPK
             string[] orgLines = convertLinesFromUCS2(File.ReadAllBytes(orgFile));
             string[] traLines = convertLinesFromUCS2(File.ReadAllBytes(traFile));
 
-            output += compareVariableNames(orgLines, traLines);
+            output += orgFile.Contains("subtitle") ? CompareVariableNames(orgLines, traLines, true) : CompareVariableNames(orgLines, traLines);
 
             output += "\n\n";
             return output;
@@ -128,10 +128,10 @@ namespace SuisVPK
         /// <param name="orgFile">Variable arrays from original language file.</param>
         /// <param name="traLines">Variable arrays from a translated file.</param>
         /// <returns>A string listing which variables are missing in translated file.</returns>
-        private string compareVariableNames(string[] orgFile, string[] traLines)
+        private string CompareVariableNames(string[] orgFile, string[] traLines, bool isCaptionFile = false)
         {
-            string[] varsOrg = getVariableNames(orgFile);
-            string[] varsTra = getVariableNames(traLines);
+            string[] varsOrg = GetVariableNames(orgFile, isCaptionFile);
+            string[] varsTra = GetVariableNames(traLines, isCaptionFile);
 
             string missingVariablesList = "";
             foreach(string variable in varsOrg)
@@ -150,39 +150,94 @@ namespace SuisVPK
         /// </summary>
         /// <param name="file">Filepath to a file that is to be read.</param>
         /// <returns></returns>
-        private string[] getVariableNames(string[] file)
+        private string[] GetVariableNames(string[] file, bool isCaption)
         {
             List<string> variableNames = new List<string>();
 
-            for (int i = 0; i < file.Length; i++)
+            if(isCaption)
             {
-                string line = file[i];
-
-                if (line == "" || line.StartsWith("//"))
-                    continue;
-
-                int startLoc = -1;
-                int endLoc = -1;
-
-
-                startLoc = line.IndexOf('\"');
-                if (startLoc >= 0)
+                file = StripValveCaptionLayer(file);
+                file = StripValveCaptionLayer(file);
+                for(int i = 0; i < file.Length; i++)
                 {
-                    if (line.Contains("radial_moving_to_objective_subtitle_cp"))
-                        System.Threading.Thread.Sleep(1);
+                    string line = file[i];
+                    line = line.Trim(new char[] { '\t', ' ' });
 
-                    endLoc = findEndVarName(startLoc, line);
-                    if (endLoc > 0)
+                    if(line == "" || line.StartsWith("//"))
+                        continue;
+
+                    int startLoc = -1;
+                    int endLoc = -1;
+
+
+                    startLoc = line.IndexOf('\"');
+                    if(startLoc >= 0)
                     {
-                        variableNames.Add(line.Substring(startLoc, endLoc-1));
+                        endLoc = line.Substring(startLoc + 1).IndexOf('\"') - (startLoc);
+                        if(endLoc > 0)
+                        {
+                            variableNames.Add(line.Substring(startLoc +1, endLoc));
+                        }
                     }
                 }
+                return variableNames.ToArray();
             }
-            return variableNames.ToArray();
+            else
+            {
+                for(int i = 0; i < file.Length; i++)
+                {
+                    string line = file[i];
 
+                    if(line == "" || line.StartsWith("//"))
+                        continue;
+
+                    int startLoc = -1;
+                    int endLoc = -1;
+
+
+                    startLoc = line.IndexOf('\"');
+                    if(startLoc >= 0)
+                    {
+                        endLoc = findEndVarName(startLoc, line);
+                        if(endLoc > 0)
+                        {
+                            variableNames.Add(line.Substring(startLoc, endLoc - 1));
+                        }
+                    }
+                }
+                return variableNames.ToArray();
+            }
         }
 
         char[] forbiddenCharactersForString = {' ', '\'', '/', '\\' };
+
+        private string[] StripValveCaptionLayer(string[] linesArray)
+        {
+            int startLoc = -1;
+            int endLoc = -1;
+            for(int i = 0; i < linesArray.Length; i++)
+            {
+                if(linesArray[i].Contains("{"))
+                {
+                    startLoc = i +1;
+                    break;
+                }
+            }
+
+            for(int i = linesArray.Length - 1; i > 0; i--)
+            {
+                if(linesArray[i].Contains("}"))
+                {
+                    endLoc = i;
+                    break;
+                }
+            }
+
+            if(startLoc == -1 || endLoc == -1)
+                throw new Exception("WTF, MAN!");
+
+            return (linesArray.Skip(startLoc).Take(endLoc - startLoc)).ToArray();
+        }
 
         /// <summary>
         /// Usually finds a position of closing quotation mark.... usually.
