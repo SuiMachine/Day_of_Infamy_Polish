@@ -138,7 +138,12 @@ namespace SuisVPK
             {
                 if(!varsTra.Contains(variable))
                 {
-                    missingVariablesList += variable + "\n";
+                    if(isCaptionFile)
+                    {
+                        missingVariablesList += orgFile.FirstOrDefault(x => x.Contains(variable)); //Slow as fuck, can't be bothered
+                    }
+                    else
+                        missingVariablesList += variable + "\n";
                 }
             }
             return missingVariablesList;
