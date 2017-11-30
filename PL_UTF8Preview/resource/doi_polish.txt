@@ -1416,7 +1416,7 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_LoadingHint_Suppression"		"Kiedy jesteś pod ostrzałem wroga, Twój obraz staje się rozmyty i ciężej Ci jest celować."
 		"GameUI_LoadingHint_ArtilleryBuddies"	"Kiedy oficerowie i radiooperatorzy dobrze współpracują, mogą zupełnie zmienić bieg bitwy."
 		"GameUI_LoadingHint_SniperAdvice"		"Kiedy grasz snajperem, upewnij się że chronisz lub atakujesz cele. Nie trzymaj się z tyłu. Wspieraj swoją drużynę."
-		"GameUI_LoadingHint_CaptureObjectives"	"Graj agresywnie. Przejmowane cele wygrywają wojnę i dają Twojej drużynie więcej fal posiłków."
+		"GameUI_LoadingHint_CaptureObjectives"	"Graj agresywnie. Przejmowane cele wygrywają wojnę i zwiększają ilość posiłków Twojej drużyny."
 		"GameUI_LoadingHint_OfficerObligation"	"Bycie oficerem to odpowiedzialne zadanie. Prowadź swoją drużynę, trzymaj radiooperatora blisko i używaj wsparcia ogniowego strategicznie."
 		"GameUI_LoadingHint_HighLethality"		"Nie jesteś opancerzany, więc każde trafienie poważnie rani. Bądź ostrożny."
 		"GameUI_LoadingHint_SmokeGrenades"		"Pamiętaj o granatach dymnych! Są bardzo skuteczne przy zabezpieczaniu pozycji przeciwnika."
