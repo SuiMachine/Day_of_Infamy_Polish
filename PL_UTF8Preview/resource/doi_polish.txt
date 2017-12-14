@@ -43,6 +43,10 @@
 		"brittany_subtext"						"Francja, 1944"	
 		"shooting_range"						"Strzelnica"
 		"shooting_range_subtext"				"Anglia, 1945"
+		"flakturm"								"Flakturm VII"
+		"flakturm_subtext"						"Wiedeń, Austria, 1945"
+		"rhineland"								"Rhineland"
+		"rhineland_subtext"						"Niemcy, 1945"
 		
 		// Factions
 		"faction_german_army"					"Wehrmacht"
@@ -353,6 +357,7 @@
 		"weapon_enfield_bayonet_desc"			"Standard issue military bayonet"	
 		"weapon_hatchet"						"Toporek"	
 		"weapon_hatchet_desc"					"Zabrany z farmy Hinterkaifeck"	
+		
 		// German weapons
 		"weapon_stielhandgranate"				"Stielhandgranate"
 		"weapon_stielhandgranate_desc"			"Standardowy niemiecki granat odłamkowy (wybucha po 5 sekundach)"
@@ -400,6 +405,7 @@
 		"weapon_gravityknife_desc"				"Rozkłada się wykorzystując siłę grawitacji"		
 		"weapon_k98_bayonet"					"Nóż"	
 		"weapon_k98_bayonet_desc"				"Będący elementem zwykłego wyposażenia wojska bagnet"
+		
 		// Shared weapons
 		"weapon_smoke"							"Granat Dymny"
 		"weapon_smoke_desc"						"Będący elementem zwykłego wyposażenia granat dymny"		
@@ -627,6 +633,13 @@
 		"CP_Intel"								"Informacje Wywiadowcze"
 		"CP_PlaneCrash"							"Rozbity Samolot"
 		"CP_RepairShop"							"Warsztat"
+		"CP_FlakEntrance"						"Wejście do wieże Flak" 
+		"CP_Garage"	 							"Garaż"
+		"CP_Shelter"							"Schron przeciwlotniczy dla cywili"
+		"CP_Elevator"							"Winda"
+		"CP_Generator"							"Generator"
+		"CP_SwallowSouth"						"Południowe Gniazdo"
+		"CP_SwallowNorth"						"Północne Gniazdo"
 
 		// HUD
 		// Gameplay notification
@@ -952,7 +965,7 @@
 		"Tagline_axis"							"Wehrmacht"
 		"Tagline_MostKillsSniper"				"Skupiony"
 		"Tagline_MostKillsSniper_Desc"			"Zabił najwięcej wrogów strzelając z karabinu snajperskiego (%s1)."
-		"Tagline_MostKillsFlamethrower"			"Gorąca sprawa"
+		"Tagline_MostKillsFlamethrower"			"Gorący chłop"
 		"Tagline_MostKillsFlamethrower_Desc"	"Zabił najwięcej wrogów korzystając z miotacza ognia (%s1)."
 		"Tagline_MostKillsMG"					"Na stanowisku"
 		"Tagline_MostKillsMG_Desc"				"Zabił najwięcej wrogów strzelając z karabinu maszynowego (%s1)."
@@ -980,7 +993,7 @@
 		"Tagline_ResetObjectives1_Desc"			"Ponownie zabezpieczył przejmowany punkt %s1 razy."
 		"Tagline_ResetObjectives2"				"Protektor"
 		"Tagline_ResetObjectives2_Desc"			"Ponownie zabezpieczył przejmowany punkt %s1 razy."
-		"Tagline_HeadshotsTier0"				"Noggin Knocker"
+		"Tagline_HeadshotsTier0"				"Łowca czerepów"
 		"Tagline_HeadshotsTier0_Desc"			"Uzyskał wynik %s1 strzałów w głowę."
 		"Tagline_HeadshotsTier1"				"Łowca głów"
 		"Tagline_HeadshotsTier1_Desc"			"Uzyskał wynik %s1 strzałów w głowę."
@@ -990,7 +1003,7 @@
 		"Tagline_MostObjectives_Desc"			"Przejął lub zniszczył najwięcej celów (%s1)."
 		"Tagline_HighestAccuracy"				"Precyzyjny"
 		"Tagline_HighestAccuracy_Desc"			"Uzyskał najwyższą celność posiadając więcej niż 50% trafionych strzałów (%s1%)."
-		"Tagline_MostKills"						"Główny Zabójca"
+		"Tagline_MostKills"						"Główny zabójca"
 		"Tagline_MostKills_Desc"				"Zabił najwięcej wrogów (%s1)."
 		"Tagline_KillsTier1"					"Śmiertelny"
 		"Tagline_KillsTier1_Desc"				"Zabił %s1 wrogów."
@@ -1189,8 +1202,17 @@
 		"GameUI_CooperativeMenuDescription"				"Określ ustawienia trybu kooperacji"
 		"GameUI_CooperativeDifficulty_Normal"			"Żołnierz Piechoty"
 		"GameUI_CooperativeDifficulty_Normal_Desc"		"Walcz przeciwko siłom wroga, posiadając dostęp do pełnego wsparcia ogniowego"
+		"GameUI_CooperativeDifficulty_Normal_FullDesc_Title"	"Cechy"
+		"GameUI_CooperativeDifficulty_Normal_FullDesc_Body"		" Widoczne oznaczenia kompanów
+ Krótkie przerwy pomiędzy wsparciem ogniowym"
 		"GameUI_CooperativeDifficulty_Hard"				"Komandos"
 		"GameUI_CooperativeDifficulty_Hard_Desc"		"Walcz przeciwko wysoce wyszkolonym siłom wroga, posiadając dostęp do ograniczonego wsparcia ogniowego"		
+		"GameUI_CooperativeDifficulty_Hard_FullDesc_Title"	"Cechy"
+		"GameUI_CooperativeDifficulty_Hard_FullDesc_Body"		" Wrogowie mają lepszy ekwipunek
+ Wrogowie celniej strzelają
+ Wrogowie agresywniej atakują
+ Brak oznaczeń dla kompanów
+ Długie przerwy pomiędzy wsparciem ogniowym"
 		"GameUI_Play"									"Graj"
 		"GameUI_CustomGames"							"Gry niestandardowe"
 		"GameUI_BrowseServers"							"Wyszukaj serwery"
@@ -1400,6 +1422,8 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"GameUI_Gamemode"						"Tryb gry"
 		"GameUI_GamemodeDescription"			"Odprawa"
 		// Hints
+		"Hint_Confirmation"									"Naciśnij SPACJĘ by kontynuować"
+
 		// Loading hints
 		"GameUI_LoadingHint_PickupGrenades"		"Możesz podnieść granat przeciwnika klawiszem użyj (%+use%) i odrzucić go!"
 		"GameUI_LoadingHint_OfficerPurpose"		"Jako oficer, możesz wydawać rozkazy twojemu oddziałowi i wzywać wsparcie ogniowe używając menu promieniowego (%+radialmenu%)."
@@ -1492,21 +1516,18 @@ Rozpoczynasz z 10 punktami zasobów. Dodatkowe punkty możesz zdobyć w następu
 		"Hint_ShootingRange_ResetTargets_Title"				"Restartowanie strzelnicy"
 		
 		"Hint_ShootingRange_Welcome_Description"			"Tutejsza strzelnica została stworzona dla osób, które chciały zapoznać się z systemem poruszania oraz mechaniką strzelania w grze. Jest także miejscem, gdzie możesz się zrelaksować i rozładować nerwy.\nZnajdziesz tu różnego rodzaju bronie, od pistoletów i karabinów z zamkiem czterotaktowym, aż po niszczycielskie bazooki i wiązki TNT."
-		
 		"Hint_ShootingRange_BoltAction_Description"			"Ta strzelnica poświęcona jest karabinom z zamkiem czterotaktowym. Przyjdzie Ci dość często z nich korzystać.\nKarabiny te przeznaczone są głównie do walki na średnią i długą odległość. Były popularne podczas Drugiej Wojny Światowej.\n\nBy wystrzelić jeden nabój naciśnij klawisz %+attack%. Jeśli przytrzymasz klawisz %+attack%, opóźnisz ładowanie kolejnego naboju do komory - możesz to wykorzystać, jeśli chcesz potwierdzić trafienie.\n\nNaciskając %+toggle_zoom% możesz wycelować korzystając z przyrządów celowniczych. Jeśli naciśniesz przycisk %+sprint% podczas celowania, wstrzymasz swój oddech, dodatkowo stabilizując przez to broń.\n\nNaciskając %+special1%, możesz wykonać atak kolbą broni. Doczepiając do broni bagnet, możesz wykorzystać ten sam klawisz, by wykonać szarżę na wroga i wbić w niego ostrze zaczepione na broni."
-		
 		"Hint_ShootingRange_ExplosiveRocket_Description"	"Granatniki i wyrzutnie rakiet są świetnym sposobem, by z odległości zrujnować komuś dzień. Stosuje się je stosunkowo łatwo i są one skuteczne w wielu sytuacjach.\n\nNaciskając i lub przytrzymując klawisz %+toggle_zoom% możesz wycelować stosując przyrządy celownicze broni. Dodatkowo przytrzymując %+sprint%, możesz też zredukować kołysanie broni. Naciskając %+attack% odpalasz ładunek.\n\nNiektóre bronie są tylko pojedynczego użytku, przez co będziesz musiał pobrać dodatkową amunicję, korzystając ze skrzynki z amunicją lub wycofując się do strefy zaopatrzenia."
-		
 		"Hint_ShootingRange_ExplosivePlantable_Description"	"Ładunki wybuchowe mogą być wykorzystywane do szybkiego \"czyszczenia pomieszczeń\" oraz niszczenia różnego rodzaju obiektów, jak: ściany, pompy paliwowe, działa przeciwlotnicze, a czasami nawet drzwi.\nPo podłożeniu, ładunków nie da się rozbroić, więc upewnij się, że Twoi kompani opuścili obszar eksplozji, zanim zdecydujesz się je podłożyć lub je rzucić. Po zapaleniu lontu, będziesz miał 10 sekund, by opuścić niebezpieczny obszar i znaleźć ochronę.\n\nAby podłożyć ładunek, najpierw znajdź płaską powierzchnie, do której może on być przyczepiony.\n\nMożesz również rzucić ładunek, wykorzystując klawisz %+attack%. Pamiętaj jednak, że ładunki wybuchowe sporo ważą, więc nie da się ich stosować na taką dużą odległość, na jaką stosuje się granaty.\n\nNaciskając klawisz %+toggle_zoom% możesz podłożyć ładunki. Gdy usłyszysz syk lontu - wynoś się jak daleko tylko możesz."
-		
 		"Hint_ShootingRange_ExplosiveThrowable_Description"	"Istnieją głównie dwa typy granatów miotanych oraz cała gama sposób na ich zastosowanie.\n\nGranaty \"gotowane\" można \"gotować\", wyciągając z nich zawleczkę i odliczając czas przed eksplozją.\nGranaty \"uderzeniowe\" wybuchają natomiast, przy uderzeniu w najbliższą powierzchnię.\n\nTrzymając klawisz %+attack% możesz wyciągnąć zawleczkę granatu. Zazwyczaj będziesz miał ok. 4-5 sekund, aby wycelować, zanim granat eksploduje. Puszczając klawisz %+attack% rzucisz granat w kierunku w którym patrzysz. Trzymając klawisz %+toggle_zoom%, możesz też wycelować granat, bez uzbrajania go lub wyciągania zawleczki.  Puszczając klawisz %+toggle_zoom% wyciągniesz zawleczkę i rzucisz granat w stronę, w którą patrzysz.\n\nW końcu, możesz też podrzucić granat naciskając klawisz %+special1%."
-		
 		"Hint_ShootingRange_SMGLMG_Description"				"Pistolety maszynowe i lekkie karabiny maszynowe są użyteczne podczas walki na bliski dystans i wykorzystuje się je, w celu szybkiego przejęcia obszaru.\n\nNaciskając %+attack% możesz strzelać z biodra. By wycelować przez przyrządy celownicze, naciśnij klawisz %+toggle_zoom%.\n\nNiektóre pistolety maszynowe i lekkie karabiny maszynowe posiadają więcej niż jeden tryb strzelania. Można go przełączyć poprzez naciśnięcie klawisza %+firemode%."
-		
 		"Hint_ShootingRange_MachineGun_Description"			"Są to Twoi najlepsi przyjaciele, gdy musisz utrzymać linię frontu. Karabiny maszynowe wymagają rozstawienia oraz współpracy z członkami zespołu, by utrzymać strzelca żywego i zaopatrzonego w amunicję.\n\nChoć możliwe jest strzelanie nimi z biodra, poprzez naciśnięcie klawisza %+attack%, zazwyczaj się tego odradza, ze względu na spory odrzut spowodowany strzałem.\n\nOdrzut można znacząco zredukować poprzez rozstawienie broni na płaskiej powierzchni gdy leżysz lub klęczysz na podłodze.\n\nGdy broń osadzona jest na dwójnogu, możesz również wykorzystać jej przyrządy celownicze, naciskając klawisz %+toggle_zoom%."
-		
 		"Hint_ShootingRange_Flamethrower_Description"		"Te paskustwa dają wrogą przedsmak piekła, które ich czeka. Miotacze ognia sprawują się doskonale niemal w każdej robocie, o ile tylko stosowane są na bliski dystans. Efektywność miotacza, spada niemalże do zera, gdy Twój cel znajduje się poza zasięgiem rażenia."
-		
 		"Hint_ShootingRange_ResetTargets_Description"		"Naciśnij klawisz %+use%, celując na tarczę na stole, by zrestartować położenie celów na strzelnicy."
+		
+		// Plantable Objects & Quick Select
+		"QuickSelect_Inventory_Title"			"Quick Select Abilities"
+		"Plantable_AmmoPouch_Title"				"Ammo Satchel"
+		"Plantable_AmmoPouch_Description"		"Allows you to plant an ammo satchel.\nIt replenishes ammo on use."
 	}
 }
