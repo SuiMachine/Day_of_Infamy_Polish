@@ -370,6 +370,51 @@
 		"StartYAmmoType"		"26"
 		"NeutralColor"			"255 255 255 255"
 		"ShadowColor"			"0 0 0 200"
+		
+		"QuickSelectOffsetX"		"-50"
+		"QuickSelectLabelOffsetX"	"-22"
+		
+		"QuickSelectImagePanel"
+		{
+			"fieldName"			"QuickSelectImagePanel"
+			"ControlName"		"CBitmapImagePanel"
+			//"xpos"				"r125"
+			"ypos"				"20"
+			"wide"				"25"
+			"tall"				"25"
+			"visible"			"1"
+			"enabled"			"1"
+			"paintbackground"	"1"
+			"font"				"HudDescriptiveVariableWidthLarge"
+			"textAlignment"		"west"
+			"allcaps"			"0"
+			"shadow"			"1"
+			"proportionalToParent"	"1"
+			
+			"image"				"hud/icn_player"
+			"imagecolor"		"255 255 255 255"
+			"imageAlignment"	"center"
+		}
+		
+		"QuickSelectStockLabel"
+		{
+			"fieldName"			"QuickSelectStockLabel"
+			"ControlName"		"Label"
+			//"xpos"				"r120"
+			"ypos"				"30"
+			"wide"				"25"
+			"tall"				"25"
+			"visible"			"1"
+			"enabled"			"1"
+			"paintbackground"	"1"
+			"font"				"HudHeaderMedium"
+			"textAlignment"		"west"
+			"allcaps"			"0"
+			"shadow"			"1"
+			"proportionalToParent"	"1"
+			
+			"labelText"			"-"
+		}
 	}	
 
 	CHudWeaponInfo_FireMode
@@ -1204,7 +1249,7 @@
 		"FontSupply"			"HudHeaderMedium"
 		"SupplyCountColor"		"10 15 10 240"
 	}
-
+	
 	"CHudMapBriefing"
 	{
 		"fieldName"							"CHudMapBriefing"
