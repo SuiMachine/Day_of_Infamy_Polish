@@ -709,7 +709,7 @@
 		"death_obj_ammo_crate"					"Skrzynia z amunicją"
 		// Use progress
 		"game_use_progress_resupply"			"Uzupełnianie..."
-		"game_use_progress_resupply_desc"		"Naciśnij, żeby pobrać amunicję. Przytrzymaj, żeby uzupełnić."
+		"game_use_progress_resupply_desc"		"Naciśnij klawisz, żeby pobrać brakujące magazynki lub\nprzytrzymaj klawisz, żeby uzupełnić całe zaopatrzenie."
 		"game_use_progress_generic"				"Interakcja..."
 		// Misc
 		"UI_Waves"								"FALE"

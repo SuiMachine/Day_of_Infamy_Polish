@@ -82,14 +82,15 @@
 
 	CHudProgress
 	{
+		//Responsible for Resuply dialog
 		"fieldName"				"CHudProgress"
 		"visible"				"1"
 		"enabled"				"1"
-		"xpos"					"c-150"
+		"xpos"					"c-200"
 		"ypos"					"450"
 		"zpos"					"1"
-		"wide"					"360"		
-		"tall"					"70"	
+		"wide"					"320"		
+		"tall"					"80"	
 		"paintbackground"		"1"
 		"bgcolor_override"		"38 36 32 150"
 		
@@ -101,7 +102,7 @@
 			"fieldName"			"UseProgressBar"
 			"xpos"				"10"
 			"ypos"				"10"
-			"wide"				"340"
+			"wide"				"300"
 			"tall"				"30"
 		}
 		
@@ -110,7 +111,7 @@
 			"fieldName"			"UseStringLabel"
 			"xpos"				"10"
 			"ypos"				"10"
-			"wide"				"340"
+			"wide"				"300"
 			"tall"				"30"
 			"textAlignment"		"center"
 			"font"				"HudHeaderExtraLarge" 
@@ -122,8 +123,8 @@
 			"fieldName"			"UseDescriptionLabel"
 			"xpos"				"10"
 			"ypos"				"45"
-			"wide"				"340"
-			"tall"				"15"
+			"wide"				"300"
+			"tall"				"32"
 			"textAlignment"		"center"
 			"font"				"HudGenericText"
 		}
